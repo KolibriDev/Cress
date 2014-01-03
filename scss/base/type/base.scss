@@ -7,12 +7,12 @@ a {
   @include transition(color $transition-speed-fast);
   cursor: pointer;
 
-  color: $color-secondary;
+  color: $color-primary;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: darken($color-primary,10%);
+    color: $color-primary-darker;
   }
 }
 
