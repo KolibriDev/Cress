@@ -1,2 +1,21 @@
 
-footer {}
+footer {
+  @include user-select(none);
+  @include clearfix;
+
+  cursor: default;
+
+  margin: $spacing auto 0;
+  padding: $spacing $spacing 0;
+
+  font-size: em-calc(12);
+  text-align: center;
+  color: white;
+
+  background-color: $color-secondary;
+
+  a {
+    color: white;
+    &:hover { color: $color-light; }
+  }
+}
