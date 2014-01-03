@@ -26,25 +26,6 @@
 	list-style-position: outside;
 }
 
-@mixin background-clip($clip) {
-	-webkit-background-clip: $clip;
-	-moz-background-clip: $clip;
-	background-clip: $clip;
-}
-
-@mixin background-origin($origin) {
-	-webkit-background-origin: $origin;
-	-moz-background-origin: $origin;
-	background-origin: $origin;
-}
-
-@mixin background-size($size){
-	-webkit-background-size: $size;
-	-moz-background-size: $size;
-	-o-background-size: $size;
-	background-size: $size;
-}
-
 @mixin filter($filter-type,$filter-amount) {
   -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
   -moz-filter: $filter-type+unquote('(#{$filter-amount})');
