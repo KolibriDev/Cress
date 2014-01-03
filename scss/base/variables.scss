@@ -6,8 +6,9 @@ $mobile-first: false;
 $spacing: 20px;
 $page-max-width: 1200px;
 $page-min-width: 320px;
-$radius: 2px;
-$box-radius: 4px;
+$radius: 4px;
+$box-radius: $radius;
+$button-radius: $radius;
 
 $size-small: 30px;
 $size-medium: 40px;
@@ -84,7 +85,7 @@ $transition-speed-slow: 350ms;
 
 // Grid
 $grid-count: 12;
-$grid-gutter: 20px;
+$grid-gutter: $spacing;
 
 // Breaking points
 $break-small: 496px;
