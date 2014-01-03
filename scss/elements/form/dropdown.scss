@@ -3,7 +3,6 @@
 .input {
 
   .dropdown {
-    @include default-input;
     @include user-select(none);
 
     padding: 0;
@@ -112,7 +111,7 @@
         z-index: 99;
         border: 1px solid lighten($color-primary,10%);
         border-top: 0;
-        border-radius: 0 0 $form-border-radius $form-border-radius;
+        border-radius: 0 0 $form-radius $form-radius;
 
         >li {
           display: block;

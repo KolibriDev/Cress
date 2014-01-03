@@ -1,65 +1,26 @@
 
-$form-border-radius: $radius;
-$form-input-border: darken($color-light,10%);
-$form-input-background: $color-white;
-$form-input-placeholder: $color-primary;
-
-$input-button: '
-  button,
-  input[type="button"],
-  input[type="reset"],
-  input[type="submit"]
-  ';
-$input-numbers: '
-  input[type="tel"],
-  input[type="number"]
-  ';
-$input-datetime: '
-  input[type="date"],
-  input[type="datetime-local"],
-  input[type="month"],
-  input[type="week"],
-  input[type="time"]
-  ';
-$input-text: '
-  textarea,
-  input[type="text"],
-  input[type="search"],
-  input[type="url"],
-  input[type="email"],
-  input[type="password"]
-  ';
-$input-textish: '
-  #{$input-text},
-  #{$input-numbers},
-  #{$input-datetime}
-  ';
-$input-dropdown: '
-  select
-  ';
-$input-other: '
-  input[type="color"]
-  ';
-$input-file: '
-  input[type="file"]
-  ';
-$input-checkradio: '
-  input[type="checkbox"],
-  input[type="radio"]
-  ';
-
-$input-all: '
-  #{$input-dropdown},
-  #{$input-text},
-  #{$input-numbers},
-  #{$input-datetime},
-  #{$input-other}';
-
-@mixin default-input {
+.dropdown,
+select,
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="color"] {
   @include clearfix;
+  @include box-sizing(border-box);
   @include transition(margin $transition-speed, border $transition-speed, box-shadow $transition-speed);
 
   display: inline-block;
+  vertical-align: bottom;
 
   position: relative;
   z-index: 8;
@@ -67,54 +28,56 @@ $input-all: '
   margin: 0;
   padding: 0 $spacing/2;
 
-  width: 100%;
+  width: auto;
+  .input & { width: 100%; }
   height: $size-medium;
-  line-height: $size-medium + 2;
+  line-height: $size-medium;
 
   font-size: $font-size-medium;
   color: $font-color;
 
   outline: none;
 
-  border: 0px solid $form-input-border;
-  border-radius: $form-border-radius;
+  border: 0;
+  border-radius: $form-radius;
 
-  background: $form-input-background;
+  background: white;
 
-  @include placeholder($form-input-placeholder);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  @include placeholder();
 
   &.disabled,
-  [disabled] {
+  &[disabled] {
     -webkit-font-smoothing: antialiased;
     color: white;
     background: $color-primary-darker;
+
+    @include placeholder(white);
   }
 
   &.large {
     padding: 0 $spacing;
 
     height: $size-large;
-    line-height: $size-large + 2;
+    line-height: $size-large;
 
     font-size: $font-size-large;
   }
 
   &.small {
     height: $size-small;
-    line-height: $size-small + 2;
+    line-height: $size-small;
 
     font-size: $font-size-small;
   }
 
-  &:focus {
-    border-color: darken($form-input-border,10%);
-  }
-
-  &:hover {
-    border-color: lighten($form-input-border,10%);
-  }
+  &:hover { box-shadow: 0 0 2px rgba($color-secondary,0.5); }
+  &:focus { box-shadow: 0 0 2px rgba($color-secondary,0.75); }
+  .error &,
+  &.error { box-shadow: 0 0 2px 1px rgba(red,0.75); }
 }
-
 
 .input {
   margin-bottom: $spacing;
@@ -150,90 +113,29 @@ $input-all: '
   }
 
   &.side {
-    padding-left: 90px;
+    $form-side-padding: 150px;
+
+    padding-left: $form-side-padding;
     position: relative;
 
     >label:first-child {
+      max-width: $form-side-padding;
       position: absolute;
       top: 0;
       left: 0;
     }
+
+    @include respond-to($form-side-padding*3) {
+      padding-left: 0;
+
+      >label:first-child {
+        max-width: none;
+        position: static;
+      }
+    }
   }
 
-  &.slide-label {
-    position: relative;
-    >label {
-      @include transition(right $transition-speed, top $transition-speed, color $transition-speed);
-      pointer-events: none;
-      white-space: nowrap;
-
-      width: 100%;
-      padding: 0 $spacing/2;
-
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 9;
-      color: $color-secondary;
-
-      text-transform: uppercase;
-    }
-    >input {
-
-      + label.filled,
-      &:active + label,
-      &:focus + label {
-        & {
-          right: 100%;
-          color: #fff;
-          text-align: right;
-        }
-      }
-    }
-    // >.ss-standard,
-    // >.ss-social,
-    // >.ss-icon,
-    >icon {
-      pointer-events: none;
-      margin: auto;
-      width: $font-size-medium;
-      height: $size-medium;
-      line-height: $size-medium + 2;
-
-      position: absolute;
-      left: $spacing/2;
-      top: 0;
-      z-index: 9;
-
-      font-size: $font-size-medium;
-      color: $color-primary;
-
-      + input + label,
-      + input { padding-left: $spacing + $font-size-medium; }
-    }
-
-    @include respond-to(middle) {
-
-      >input {
-        margin-top: 10px !important;
-
-        + label {
-          top: 10px;
-          font-size: em-calc(14);
-          >span {display: none;}
-        }
-
-        + label.filled,
-        &:active + label,
-        &:focus + label {
-          & {
-            right: 0;
-            top: -$size-medium * .5;
-            text-align: left;
-          }
-        }
-
-      }
-    }
+  &.error {
+    label { color: red; }
   }
 }

@@ -9,7 +9,7 @@
   overflow: auto; // Safari fix
 }
 
-@mixin placeholder($color: $color-gray-light,$font-style:normal) {
+@mixin placeholder($color: $color-primary,$font-style:normal) {
   &:-ms-input-placeholder {
     color: $color;
     font-style: $font-style;
