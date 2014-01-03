@@ -3,6 +3,7 @@
   @include clearfix;
   margin: 0 auto $spacing;
   padding: $spacing $spacing 0;
+  border-radius: $box-radius;
 
   &.primary {
     background-color: $color-primary;
