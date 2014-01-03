@@ -7,29 +7,30 @@
   white-space: nowrap;
   display: inline-block;
 
-  margin: 0 0 $spacing;
+  margin: 0;
   position: relative;
 
   text-align: center;
 
+  border: 1px solid transparent;
   border-radius: $button-radius;
 
   &.small {
     padding: 0 $spacing/2;
-    line-height: $size-small;
+    line-height: $size-small - 2;
     font-size: $font-size-small;
   }
 
   &, // (default)
   &.medium {
     padding: 0 $spacing;
-    line-height: $size-medium;
+    line-height: $size-medium - 2;
     font-size: $font-size-medium;
   }
 
   &.large {
     padding: 0 $spacing*1.5;
-    line-height: $size-large;
+    line-height: $size-large - 2;
     font-size: $font-size-large;
   }
 

@@ -1,12 +1,12 @@
 
-
 .button,
 .button.primary {
   color: white;
 
   background: $color-primary-darker;
-  border: 1px solid;
   border-color: $color-primary-darker;
+
+  -webkit-font-smoothing: antialiased;
 
   &:hover {
     color: $color-secondary;
@@ -20,6 +20,8 @@
 
   background: $color-secondary-darker;
   border-color: $color-secondary-darker;
+
+  -webkit-font-smoothing: antialiased;
 
   &:hover {
     color: white;
