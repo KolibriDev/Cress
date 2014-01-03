@@ -12,19 +12,23 @@
 
   text-align: center;
 
-  border-radius: $radius;
-
-  padding: 0 $spacing;
-  line-height: $size-medium;
-  font-size: $font-size-medium;
+  border-radius: $button-radius;
 
   &.small {
     padding: 0 $spacing/2;
-    line-height: $size-large;
-    font-size: $font-size-large;
+    line-height: $size-small;
+    font-size: $font-size-small;
+  }
+
+  &, // (default)
+  &.medium {
+    padding: 0 $spacing;
+    line-height: $size-medium;
+    font-size: $font-size-medium;
   }
 
   &.large {
+    padding: 0 $spacing*1.5;
     line-height: $size-large;
     font-size: $font-size-large;
   }
