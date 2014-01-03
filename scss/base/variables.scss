@@ -47,23 +47,17 @@ $nav-width-small: 60px;
 $titlebar-height: 67px;
 
 // Typography
-$font-family-din-regular: 'DIN Next W01 Regular';
-$font-family-din-medium: 'DIN Next W01 Medium';
-$font-family-din-bold: 'DIN Next W01 Bold';
-
-$font-family: $font-family-din-regular, 'Lucida Grande', Arial, tahoma, sans-serif;
-$font-family-med: $font-family-din-medium, $font-family;
-$font-family-bold: $font-family-din-bold, $font-family-med;
-$font-size: 12px;
+$font-family: 'Lucida Grande', Arial, tahoma, sans-serif;
+$font-size: 16px;
 $font-color: #333;
 $line-height: em-calc(20);
 
-$font-size-small: 16px * .8;
-$font-size-medium: 16px;
-$font-size-large: 16px * 1.2;
+$font-size-small: $font-size * .8;
+$font-size-medium: $font-size;
+$font-size-large: $font-size * 1.2;
 
-$heading-font-family: $font-family-med;
-$heading-font-weight: 400;
+$heading-font-family: $font-family;
+$heading-font-weight: bold;
 $heading-text-transform: none;
 
 // Text direction & floats
