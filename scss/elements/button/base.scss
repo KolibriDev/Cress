@@ -37,16 +37,17 @@
 
   >.ss-standard, >.ss-social,
   >icon, >[icon] {
-    font-size: 0.875em;
-    width: 2em;
+    $icon-size: 0.875em;
+    font-size: $icon-size;
+    width: $icon-size*2;
 
     &:first-child {
-      margin-left: -1em;
-      padding-right: 0.5em;
+      margin-left: -$icon-size;
+      padding-right: $icon-size/2;
     }
     &:last-child {
-      margin-right: -1em;
-      padding-left: 0.5em;
+      margin-right: -$icon-size;
+      padding-left: $icon-size/2;
     }
   }
 
