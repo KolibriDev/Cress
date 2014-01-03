@@ -1,6 +1,7 @@
 
 hero {
   @include user-select(none);
+
   cursor: default;
   display: block;
 
@@ -8,8 +9,9 @@ hero {
   height: 600px;
 
   position: relative;
+  z-index: 20;
 
-  background-color: rgba($color-primary,1);
+  background-color: $color-primary;
 
   inner {
     overflow: hidden;
@@ -32,6 +34,6 @@ hero {
     text-align: center;
     color: white;
 
-    background-color: rgba($color-secondary,1);
+    background-color: $color-secondary;
   }
 }
