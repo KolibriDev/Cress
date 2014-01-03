@@ -28,12 +28,12 @@ main {
   padding: 0;
 }
 
-// Default box-sizing to border-box, except for images
+// Default box-sizing to border-box, except for images and hr
 *, *:before, *:after {
   @include box-sizing(border-box);
 }
 
-img {
+hr,img {
   @include box-sizing(content-box);
 }
 
