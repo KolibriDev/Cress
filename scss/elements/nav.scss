@@ -1,2 +1,67 @@
 
-nav {}
+nav {
+  &.top {
+    @include user-select(none);
+    @include clearfix;
+    margin: 0 auto;
+
+    background-color: $color-primary;
+
+    ul { @include reset-list; margin: 0; padding: 0; }
+
+    >ul {
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        position: relative;
+        z-index: 30;
+        font-size: $font-size;
+
+        >a {
+          @include transition(background-color $transition-speed-fast);
+          display: block;
+          padding: $spacing;
+          line-height: em-calc(20);
+
+          color: white;
+        }
+
+        &:hover >a,
+        >a:hover {
+          color: white;
+          background-color: $color-secondary;
+        }
+
+        >ul {
+          opacity: 0;
+          visibility: hidden;
+
+          position: absolute;
+          top: 100%;
+          left: 0;
+          z-index: 30;
+
+          >li {
+            display: block;
+
+            >a {
+              padding: $spacing/2 $spacing;
+              background: $color-secondary;
+
+              &:hover { background-color: $color-secondary-darker; }
+            }
+          }
+        }
+
+        &:hover {
+          >ul {
+            @include transition(opacity $transition-speed-fast);
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}
