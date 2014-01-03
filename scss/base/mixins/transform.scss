@@ -1,0 +1,118 @@
+
+// ==========================================================================
+// Transformations
+// ==========================================================================
+
+@mixin transform($str) {
+  -webkit-transform: $str;
+  -moz-transform: $str;
+  -ms-transform: $str;
+  -o-transform: $str;
+  transform: $str;
+}
+
+@mixin transform-origin($x: left, $y: top) {
+  -webkit-transform-origin: $x $y;
+  -moz-transform-origin: $x $y;
+  -ms-transform-origin: $x $y;
+  -o-transform-origin: $x $y;
+  transform-origin: $x $y;
+}
+
+@mixin transform-style($style) {
+  -webkit-transform-style: $style;
+  -moz-transform-style: $style;
+  -ms-transform-style: $style;
+  -o-transform-style: $style;
+  transform-style: $style;
+}
+
+@mixin perspective($perspective) {
+  -webkit-perspective: $perspective;
+  -moz-perspective: $perspective;
+  -ms-perspective: $perspective;
+  -o-perspective: $perspective;
+  perspective: $perspective;
+}
+
+@mixin perspective-origin($perspective-origin) {
+  -webkit-perspective-origin: $perspective-origin;
+  -moz-perspective-origin: $perspective-origin;
+  -ms-perspective-origin: $perspective-origin;
+  -o-perspective-origin: $perspective-origin;
+  perspective-origin: $perspective-origin;
+}
+
+@mixin backface-visibility($string) {
+  -webkit-backface-visibility: $string;
+  -moz-backface-visibility: $string;
+  -ms-backface-visibility: $string;
+  -o-backface-visibility: $string;
+  backface-visibility: $string;
+}
+
+// Shortcuts ============================================================
+
+@mixin translate($x: 0, $y: 0) {
+  @include transform (translate($x, $y));
+}
+@mixin translate3d($x: 0, $y: 0, $z: 0) {
+  @include transform (translate3d($x, $y, $z));
+}
+@mixin translateX($x: 0) {
+  @include transform (translateX($x));
+}
+@mixin translateY($y: 0) {
+  @include transform (translateY($y));
+}
+@mixin translateZ($z: 0) {
+  @include transform (translateZ($z));
+}
+
+@mixin scale($x:1) {
+  @include transform (scale($x));
+}
+@mixin scale($x:1, $y:1) {
+  @include transform (scale($x, $y));
+}
+@mixin scale3d($x:1, $y:1, $z:1) {
+  @include transform (scale3d($x, $y, $z));
+}
+@mixin scaleX($x:1) {
+  @include transform (scaleX($x));
+}
+@mixin scaleY($y:1) {
+  @include transform (scaleY($y));
+}
+@mixin scaleZ($z:1) {
+  @include transform (scaleZ($z));
+}
+
+@mixin rotate($angle:0) {
+  @include transform (rotate($angle));
+}
+@mixin rotate3d($x:0, $y:0, $z:0, $angle:0) {
+  @include transform (rotate3d($x, $y, $z, $angle));
+}
+@mixin rotateX($x:0) {
+  @include transform (rotateX($x));
+}
+@mixin rotateY($y:0) {
+  @include transform (rotateY($y));
+}
+@mixin rotateZ($z:0) {
+  @include transform (rotateZ($z));
+}
+
+@mixin skew($angle:0) {
+  @include transform (skew($angle));
+}
+@mixin skew($x: 0, $y: 0) {
+  @include transform (skew($x, $y));
+}
+@mixin skewX($x:0) {
+  @include transform (skewX($x));
+}
+@mixin skewY($y:0) {
+  @include transform (skewY($y));
+}

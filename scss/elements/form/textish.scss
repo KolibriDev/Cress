@@ -1,0 +1,83 @@
+
+#{$input-textish} {
+  @include default-input;
+  width: auto;
+
+  .input &,
+  &.fill { width: 100%; }
+  @include respond-to(middle) {
+    font-size: $font-size-medium * 0.875;
+  }
+}
+
+.input.required {
+  &:before, &:after {
+    @include transition(opacity, padding, top, left, right, bottom);
+    @include transition-duration($transition-speed);
+  }
+  &:before {
+    pointer-events: none;
+    opacity: 0;
+
+    @extend .ss-standard;
+    content: 'warning';
+    width: $font-size-medium;
+    height: $size-medium;
+    line-height: $size-medium + 2;
+
+    position: absolute;
+    right: $spacing/2;
+    top: 0;
+    z-index: 9;
+
+    font-size: $font-size-medium;
+    color: $color-secondary;
+  }
+  &:after {
+    content: attr(data-error);
+
+    padding: 0;
+    padding-right: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    bottom: 0px;
+
+    font-family: $font-family-med;
+    font-size: em-calc(14);
+    text-align: right;
+
+    background: $color-secondary;
+    border-radius: $form-border-radius*2;
+  }
+
+  &.error {
+    input { margin-bottom: 40px; }
+    &:before {
+      opacity: 1;
+    }
+    &:after {
+      padding-top: 53px;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+    }
+  }
+}
+
+textarea {
+  min-height: 80px;
+
+  @include resizable(vertical);
+
+  &.disabled,
+  &[disabled] {
+    @include resizable(none);
+  }
+}
+
+.input {
+}

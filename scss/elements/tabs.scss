@@ -1,0 +1,40 @@
+
+tabs {
+  display: block;
+
+  > ul {
+    @include clearfix();
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    li {
+      display: inline;
+
+      a {
+        display: inline-block;
+        padding: 0 1.5em;
+        background: $color-light;
+        line-height: 36px;
+      }
+
+      &.selected a {
+        background: white;
+        border-top: 4px $color-primary solid;
+      }
+    }
+  }
+
+  .tab-content {
+    @include clearfix();
+    display: none;
+    background: white;
+    margin-left: -$spacing;
+    margin-right: -$spacing;
+    padding: $spacing;
+
+    &.active {
+      display: block;
+    }
+  }
+}

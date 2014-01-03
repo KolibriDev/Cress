@@ -1,0 +1,239 @@
+
+$form-border-radius: $radius;
+$form-input-border: darken($color-light,10%);
+$form-input-background: $color-white;
+$form-input-placeholder: $color-primary;
+
+$input-button: '
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"]
+  ';
+$input-numbers: '
+  input[type="tel"],
+  input[type="number"]
+  ';
+$input-datetime: '
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  input[type="time"]
+  ';
+$input-text: '
+  textarea,
+  input[type="text"],
+  input[type="search"],
+  input[type="url"],
+  input[type="email"],
+  input[type="password"]
+  ';
+$input-textish: '
+  #{$input-text},
+  #{$input-numbers},
+  #{$input-datetime}
+  ';
+$input-dropdown: '
+  select
+  ';
+$input-other: '
+  input[type="color"]
+  ';
+$input-file: '
+  input[type="file"]
+  ';
+$input-checkradio: '
+  input[type="checkbox"],
+  input[type="radio"]
+  ';
+
+$input-all: '
+  #{$input-dropdown},
+  #{$input-text},
+  #{$input-numbers},
+  #{$input-datetime},
+  #{$input-other}';
+
+@mixin default-input {
+  @include clearfix;
+  @include transition(margin $transition-speed, border $transition-speed, box-shadow $transition-speed);
+
+  display: inline-block;
+
+  position: relative;
+  z-index: 8;
+
+  margin: 0;
+  padding: 0 $spacing/2;
+
+  width: 100%;
+  height: $size-medium;
+  line-height: $size-medium + 2;
+
+  font-size: $font-size-medium;
+  color: $font-color;
+
+  outline: none;
+
+  border: 0px solid $form-input-border;
+  border-radius: $form-border-radius;
+
+  background: $form-input-background;
+
+  @include placeholder($form-input-placeholder);
+
+  &.disabled,
+  [disabled] {
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    background: $color-primary-darker;
+  }
+
+  &.large {
+    padding: 0 $spacing;
+
+    height: $size-large;
+    line-height: $size-large + 2;
+
+    font-size: $font-size-large;
+  }
+
+  &.small {
+    height: $size-small;
+    line-height: $size-small + 2;
+
+    font-size: $font-size-small;
+  }
+
+  &:focus {
+    border-color: darken($form-input-border,10%);
+  }
+
+  &:hover {
+    border-color: lighten($form-input-border,10%);
+  }
+}
+
+
+.input {
+  margin-bottom: $spacing;
+  position: relative;
+
+  &.tight { margin-bottom: $spacing/2; }
+
+  label {
+    display: block;
+
+    margin: 0;
+    line-height: $size-medium;
+
+    font-weight: normal;
+    font-size: $font-size-medium;
+    text-align: left;
+
+    &.small {
+      line-height: $size-small;
+      font-size: $font-size-small;
+    }
+
+    &.large {
+      line-height: $size-large;
+      font-size: $font-size-large;
+    }
+
+    &.inline {
+      display: inline-block;
+      vertical-align: bottom;
+      padding: 0 $spacing/2;
+    }
+  }
+
+  &.side {
+    padding-left: 90px;
+    position: relative;
+
+    >label:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &.slide-label {
+    position: relative;
+    >label {
+      @include transition(right $transition-speed, top $transition-speed, color $transition-speed);
+      pointer-events: none;
+      white-space: nowrap;
+
+      width: 100%;
+      padding: 0 $spacing/2;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 9;
+      color: $color-secondary;
+
+      text-transform: uppercase;
+    }
+    >input {
+
+      + label.filled,
+      &:active + label,
+      &:focus + label {
+        & {
+          right: 100%;
+          color: #fff;
+          text-align: right;
+        }
+      }
+    }
+    // >.ss-standard,
+    // >.ss-social,
+    // >.ss-icon,
+    >icon {
+      pointer-events: none;
+      margin: auto;
+      width: $font-size-medium;
+      height: $size-medium;
+      line-height: $size-medium + 2;
+
+      position: absolute;
+      left: $spacing/2;
+      top: 0;
+      z-index: 9;
+
+      font-size: $font-size-medium;
+      color: $color-primary;
+
+      + input + label,
+      + input { padding-left: $spacing + $font-size-medium; }
+    }
+
+    @include respond-to(middle) {
+
+      >input {
+        margin-top: 10px !important;
+
+        + label {
+          top: 10px;
+          font-size: em-calc(14);
+          >span {display: none;}
+        }
+
+        + label.filled,
+        &:active + label,
+        &:focus + label {
+          & {
+            right: 0;
+            top: -$size-medium * .5;
+            text-align: left;
+          }
+        }
+
+      }
+    }
+  }
+}

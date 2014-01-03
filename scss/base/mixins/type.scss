@@ -1,0 +1,53 @@
+
+// ==========================================================================
+// Text/content related
+// ==========================================================================
+
+@mixin font-face( $family-name, $font-path, $font-weight:normal, $font-style:normal) {
+  @font-face {
+      font-family: $family-name;
+      src: url('#{$font-path}.eot');
+      src: url('#{$font-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$font-path}.svg##{$family-name}') format('svg'),
+           url('#{$font-path}.woff') format('woff'),
+           url('#{$font-path}.ttf') format('truetype');
+      font-weight: $font-weight;
+      font-style: $font-style;
+  }
+}
+
+@mixin user-select($select:none) {
+  -webkit-user-select: $select;
+  -khtml-user-select: $select;
+  -moz-user-select: $select;
+  -o-user-select: $select;
+  user-select: $select;
+}
+
+@mixin text-overflow() {
+  // Requires inline-block or block for proper styling
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin columns($width: ($page-max-width/3 - ($spacing*2)), $count: 0, $gap: $spacing, $rule-color: $color-border, $rule-style: solid, $rule-width: 0px) {
+  -moz-column-width: $width;
+  -moz-column-count: $count;
+  -moz-column-gap: $gap;
+  -moz-column-rule-color: $rule-color;
+  -moz-column-rule-style: $rule-style;
+  -moz-column-rule-width: $rule-width;
+  -webkit-column-width: $width;
+  -webkit-column-count: $count;
+  -webkit-column-gap: $gap;
+  -webkit-column-rule-color: $rule-color;
+  -webkit-column-rule-style: $rule-style;
+  -webkit-column-rule-width: $rule-width;
+  column-width: $width;
+  column-count: $count;
+  column-gap: $gap;
+  column-rule-color: $rule-color;
+  column-rule-style: $rule-style;
+  column-rule-width: $rule-width;
+}
