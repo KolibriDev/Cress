@@ -25,6 +25,14 @@ scss
 ├── vendor/
 ```
 
+## Build
+Simple building is possible, including a minified version.
+
+```shell
+$ npm install
+$ grunt build
+```
+
 ## Author
 
 Form5 is a small interactive studio based in Reykjavík, Iceland. We design and build websites and apps. To learn more about us, check out [www.Form5.is](http://www.form5.is).
