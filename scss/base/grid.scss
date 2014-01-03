@@ -17,12 +17,14 @@
 
   @include clearfix;
   margin: 0 auto $spacing;
+  padding-left: $grid-gutter/2;
+  padding-right: $grid-gutter/2;
 
   width: 100%;
   max-width: $page-max-width;
   min-width: $page-min-width;
 
-  .row { margin: 0 (-$grid-gutter/2) $spacing; }
+  .row { margin: 0 (-$grid-gutter) $spacing; }
 
   &.inline {
     width: auto;
@@ -31,8 +33,8 @@
   }
 
   .col > & {
-    margin-left: -$grid-gutter/2;
-    margin-right: -$grid-gutter/2;
+    margin-left: -$grid-gutter;
+    margin-right: -$grid-gutter;
     width: auto;
   }
 
@@ -81,5 +83,7 @@
 
   > hr {
     clear: both;
+    margin-left: -$grid-gutter/2;
+    margin-right: -$grid-gutter/2;
   }
 }
