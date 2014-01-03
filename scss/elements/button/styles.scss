@@ -5,6 +5,7 @@
   color: white;
 
   background: $color-primary-darker;
+  border: 1px solid;
   border-color: $color-primary-darker;
 
   &:hover {
@@ -17,13 +18,12 @@
 .button.secondary {
   color: white;
 
-  background: $color-secondary;
-  border-color: $color-secondary;
+  background: $color-secondary-darker;
+  border-color: $color-secondary-darker;
 
   &:hover {
     color: white;
-    background: $color-secondary-darker;
-    border-color: darken($color-secondary-darker,5%);
+    background: $color-secondary;
   }
 }
 
@@ -31,11 +31,10 @@
   color: $color-secondary;
 
   background: $color-light;
-  border-color: $color-light;
+  border-color: darken($color-light,5%);
 
   &:hover {
     color: $color-secondary;
-    background: $color-light;
-    border-color: darken($color-light,5%);
+    background: $color-lighter;
   }
 }
