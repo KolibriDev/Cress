@@ -2,39 +2,41 @@
 tabs {
   display: block;
 
-  > ul {
-    @include clearfix();
-    margin: 0;
-    padding: 0;
+  >nav {
+    font-size: 0;
+    border-bottom: 2px solid $color-primary;
 
-    list-style: none;
-    li {
-      display: inline;
+    >tab {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 $spacing/2;
 
-      a {
-        display: inline-block;
-        padding: 0 1.5em;
-        background: $color-light;
-        line-height: 36px;
+      line-height: em-calc($size-medium);
+      font-size: $font-size;
+      color: $color-light;
+
+      background: $color-secondary;
+
+      &.active,
+      &[active='true'] {
+        background: $color-primary;
       }
 
-      &.selected a {
-        background: white;
-        border-top: 4px $color-primary solid;
-      }
+      >span { display: block; pointer-events: none; }
     }
   }
 
-  .tab-content {
+  >tab {
     @include clearfix();
-    display: none;
+    display: block;
+    padding: $spacing $spacing 0;
     background: white;
-    margin-left: -$spacing;
-    margin-right: -$spacing;
-    padding: $spacing;
+  }
 
-    &.active {
-      display: block;
+  &[alive='true'] {
+    >tab {
+      display: none;
+      &.active, &[active='true'] { display: block;}
     }
   }
 }
