@@ -46,6 +46,7 @@ nav {
             display: block;
 
             >a {
+              white-space: nowrap;
               padding: $spacing/2 $spacing;
               background: $color-secondary;
 
