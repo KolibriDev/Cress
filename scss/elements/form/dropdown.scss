@@ -5,13 +5,6 @@
   dropdown {
     @include user-select(none);
 
-    padding: 0;
-
-    background-color: #FCFCFC;
-    border-color: #D2D2D2;
-
-    z-index: 99;
-
     &.open, &[open],
     &:hover {
       border-color: lighten($color-primary,10%);
@@ -60,18 +53,16 @@
         left: 50%;
 
         border: $size solid transparent;
-        border-top-color: #C5C5C5;
+        border-top-color: $color-secondary;
       }
     }
 
-    >label {
+    >.label {
       display: none;
       cursor: pointer;
 
-      padding: 0 $spacing/2;
-
       font-weight: 700;
-      color: #C5C5C5;
+      color: $color-secondary;
     }
 
     >.option-wrap { display: none; }
@@ -100,6 +91,7 @@
         display: block;
         opacity: 0;
         visibility: hidden;
+        overflow: hidden;
 
         margin: 1px 0 0;
         padding: 0;
