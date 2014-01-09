@@ -69,11 +69,12 @@
   @include transform (translateZ($z));
 }
 
-@mixin scale($x:1) {
-  @include transform (scale($x));
-}
-@mixin scale($x:1, $y:1) {
-  @include transform (scale($x, $y));
+@mixin scale($x:1, $y:"") {
+  @if $y != "" {
+    @include transform (scale($x, $y));
+  } @else {
+    @include transform (scale($x));
+  }
 }
 @mixin scale3d($x:1, $y:1, $z:1) {
   @include transform (scale3d($x, $y, $z));
@@ -104,11 +105,12 @@
   @include transform (rotateZ($z));
 }
 
-@mixin skew($angle:0) {
-  @include transform (skew($angle));
-}
-@mixin skew($x: 0, $y: 0) {
-  @include transform (skew($x, $y));
+@mixin skew($x:0, $y:"") {
+  @if $y != "" {
+    @include transform (skew($x, $y));
+  } @else {
+    @include transform (skew($x));
+  }
 }
 @mixin skewX($x:0) {
   @include transform (skewX($x));
