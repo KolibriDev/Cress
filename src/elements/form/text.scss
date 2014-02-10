@@ -1,0 +1,49 @@
+
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"] {
+  // textish elements
+}
+
+.input textarea,
+textarea {
+  line-height: rem-calc(20);
+
+  @include resizable(vertical);
+
+  &.small {
+    $padding: $size-small - 20;
+    min-height: (20px * 3) + $padding;
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+  }
+
+  &,
+  &.medium {
+    $padding: $size-medium - 20;
+    min-height: (20px * 3) + $padding;
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+  }
+
+  &.large {
+    $padding: $size-large - 20;
+    min-height: (20px * 3) + $padding;
+    padding-top: $padding/2;
+    padding-bottom: $padding/2;
+  }
+
+  &.disabled,
+  &[disabled] {
+    @include resizable(none);
+  }
+}

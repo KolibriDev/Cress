@@ -1,0 +1,40 @@
+
+// ==========================================================================
+// Media Queries
+// ==========================================================================
+
+@mixin respond-to($media) {
+  @if $media == small {
+    @media #{$media-small-screen} { @content; }
+  }
+  @else if $media == medium {
+    @media #{$media-medium-screen} { @content; }
+  }
+  @else if $media == large {
+    @media #{$media-large-screen} { @content; }
+  }
+
+  @else if $media == medium-up {
+    @media #{$media-medium-screen-up} { @content; }
+  }
+  @else if $media == large-up {
+    @media #{$media-large-screen-up} { @content; }
+  }
+  @else if $media == full-up {
+    @media #{$media-full-screen-up} { @content; }
+  }
+
+  @else if $media == landscape {
+    @media #{$media-landscape} { @content; }
+  }
+  @else if $media == portrait {
+    @media #{$media-portrait} { @content; }
+  }
+  @else if $media == retina {
+    @media #{$media-retina} { @content; }
+  }
+
+  @else if type-of($media) == number {
+    @media only screen and (max-width: $media) { @content; }
+  }
+}

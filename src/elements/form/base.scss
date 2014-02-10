@@ -1,0 +1,143 @@
+
+dropdown,
+select,
+textarea,
+input[type="text"],
+input[type="search"],
+input[type="url"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="color"] {
+  @include clearfix;
+  @include box-sizing(border-box);
+  @include transition(margin $transition-speed-fast, border $transition-speed-fast, box-shadow $transition-speed-fast);
+
+  display: inline-block;
+  vertical-align: bottom;
+
+  position: relative;
+  z-index: auto;
+
+  margin: 0;
+  padding: 0 $spacing;
+
+  width: auto;
+  .input & { width: 100%; }
+  height: $size-medium;
+  line-height: $size-medium;
+
+  font-size: $font-size-medium;
+  color: $font-color;
+
+  outline: none;
+
+  border: 0;
+  border-radius: $form-radius;
+
+  background: white;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  @include placeholder(rgba($color-secondary, 0.25));
+
+  &.disabled,
+  &[disabled] {
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    background: $color-primary-darker;
+
+    @include placeholder(white);
+  }
+
+  &.large {
+    height: $size-large;
+    line-height: $size-large - 2;
+
+    font-size: $font-size-large;
+  }
+
+  &.small {
+    height: $size-small;
+    line-height: $size-small - 2;
+
+    font-size: $font-size-small;
+  }
+
+  &:hover { box-shadow: 0 0 2px rgba($color-secondary,0.5); }
+  &:focus { box-shadow: 0 0 2px rgba($color-secondary,0.75); }
+  .error &,
+  &.error { box-shadow: 0 0 2px 1px rgba(red,0.75); }
+
+  &.white {
+    background: white;
+    border: 1px $color-gray-light solid;
+  }
+}
+
+.input {
+  margin-bottom: $spacing;
+  position: relative;
+
+  &.tight { margin-bottom: $spacing/2; }
+
+  label {
+    display: block;
+
+    margin: 0;
+
+    font-weight: normal;
+    font-size: rem-calc(14);
+    text-align: left;
+
+    &.small {
+      line-height: $size-small - 2;
+      font-size: $font-size-small;
+    }
+
+    &.large {
+      line-height: $size-large - 2;
+      font-size: $font-size-large;
+    }
+
+    &.inline {
+      display: inline-block;
+      vertical-align: bottom;
+      padding: 0 $spacing/2;
+    }
+  }
+
+  &.side {
+    $form-side-padding: 150px;
+
+    padding-left: $form-side-padding;
+    position: relative;
+
+    >label:first-child {
+      max-width: $form-side-padding;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @include respond-to($form-side-padding*3) {
+      padding-left: 0;
+
+      >label:first-child {
+        max-width: none;
+        position: static;
+      }
+    }
+  }
+
+  &.error {
+    label { color: red; }
+  }
+}

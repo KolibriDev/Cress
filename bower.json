@@ -1,0 +1,24 @@
+{
+  "name": "CreSS",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Form5/Cress",
+  "authors": [
+    "Benedikt D Valdez <benedikt@form5.is>",
+    "Olafur Nielsen <olafur@form5.is>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Form5/Cress.git"
+  },
+  "keywords": [
+    "form5",
+    "cress",
+    "front-end",
+    "css",
+    "scss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules"
+  ]
+}

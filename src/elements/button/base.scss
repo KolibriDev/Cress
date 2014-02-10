@@ -1,0 +1,57 @@
+
+.button, button {
+  @include transition(color $transition-speed-fast, background $transition-speed-fast, border $transition-speed-fast);
+
+  cursor: pointer;
+  vertical-align: bottom;
+  white-space: nowrap;
+  display: inline-block;
+
+  margin: 0;
+  position: relative;
+
+  text-align: center;
+
+  border: 1px solid transparent;
+  border-radius: $button-radius;
+
+  outline: none;
+
+  &.small {
+    padding: 0 $spacing/2;
+    height: $size-small;
+    line-height: $size-small;
+    font-size: $font-size-small;
+  }
+
+  &, // (default)
+  &.medium {
+    padding: 0 $spacing;
+    height: $size-medium;
+    line-height: $size-medium;
+    font-size: $font-size-medium;
+  }
+
+  &.large {
+    padding: 0 $spacing*1.5;
+    height: $size-large;
+    line-height: $size-large;
+    font-size: $font-size-large;
+  }
+
+  span { display: inline-block; }
+
+  &.fill {
+    @include text-overflow;
+    display: block;
+    margin: 0 auto $spacing;
+    width: 100%;
+  }
+
+  &.caps { text-transform: uppercase; }
+
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

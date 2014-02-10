@@ -1,0 +1,53 @@
+
+.button, button {
+  color: white;
+
+  background: $color-primary;
+  border-color: $color-primary;
+
+  -webkit-font-smoothing: antialiased;
+
+  &:hover {
+    color: white;
+    background: $color-primary-darker;
+  }
+
+  &.dark,
+  &.secondary {
+    color: white;
+
+    background: rgba($color-secondary,0.9);
+    border-color: rgba($color-secondary,0.9);
+
+    -webkit-font-smoothing: antialiased;
+
+    &:hover {
+      color: white;
+      background: $color-secondary-darker;
+    }
+  }
+
+  &.light {
+    color: $color-secondary;
+
+    background: $color-light;
+    border-color: rgba($color-secondary,0.1);
+
+    &:hover {
+      color: $color-secondary;
+      background: $color-lighter;
+    }
+  }
+
+  &.white {
+    color: $color-secondary;
+
+    background: white;
+    border-color: rgba($color-secondary,0.1);
+
+    &:hover {
+      color: $color-secondary;
+      background: $color-lighter;
+    }
+  }
+}

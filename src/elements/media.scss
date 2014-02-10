@@ -1,0 +1,41 @@
+
+img {
+  max-width: 100%;
+
+  &.full {
+    display: block;
+    margin: 0 auto $spacing;
+    width: 100%;
+  }
+}
+
+figure {
+  @include clearfix;
+
+  display: block;
+  margin: 0 auto $spacing;
+  padding: 0;
+
+  position: relative;
+
+  >img {
+    display: block;
+    width: 100%;
+  }
+
+  >figcaption {
+    margin: 0;
+    padding: $spacing/2;
+
+    font-size: rem-calc($font-size * 0.8);
+    color: $color-light;
+
+    background: $color-secondary;
+  }
+}
+
+video {
+  display: block;
+  margin: 0 auto $spacing;
+  max-width: 100%;
+}
