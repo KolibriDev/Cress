@@ -4,7 +4,7 @@
 
   &:before,
   &:after {
-    @include transition(opacity $transition-speed);
+    transition: opacity $transition-speed;
     opacity: 0;
     visibility: hidden;
 

@@ -1,7 +1,7 @@
 
 nav {
   &.top {
-    @include user-select(none);
+    user-select: none;
     @include clearfix;
     margin: 0 auto;
 
@@ -19,7 +19,7 @@ nav {
         font-size: $font-size;
 
         >a {
-          @include transition(background-color $transition-speed-fast);
+          transition: background-color $transition-speed-fast;
           display: block;
           padding: $spacing;
           line-height: rem-calc(20);
@@ -57,7 +57,7 @@ nav {
 
         &:hover {
           >ul {
-            @include transition(opacity $transition-speed-fast);
+            transition: opacity $transition-speed-fast;
             opacity: 1;
             visibility: visible;
           }

@@ -1,8 +1,8 @@
 
 footer {
-  @include user-select(none);
   @include clearfix;
 
+  user-select: none;
   cursor: default;
 
   margin: $spacing auto 0;

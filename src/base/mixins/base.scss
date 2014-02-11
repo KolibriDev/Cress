@@ -14,12 +14,6 @@
 	}
 }
 
-@mixin box-sizing($boxmodel:border-box) {
-	-webkit-box-sizing: $boxmodel;
-	-moz-box-sizing: $boxmodel;
-	box-sizing: $boxmodel;
-}
-
 @mixin reset-list() {
 	list-style-type: none;
 	list-style-image: none;

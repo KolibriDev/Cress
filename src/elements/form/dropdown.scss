@@ -1,6 +1,6 @@
 
 dropdown {
-  @include user-select(none);
+  user-select: none;
   padding: 0;
 
   border: 1px solid $color-gray-light;
@@ -20,7 +20,7 @@ dropdown {
   }
 
   >trigger {
-    @include transition(background $transition-speed-fast);
+    transition: background $transition-speed-fast;
     display: block;
     pointer-events: none;
 

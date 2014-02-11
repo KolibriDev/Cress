@@ -4,7 +4,7 @@ p {
 }
 
 a {
-  @include transition(color $transition-speed-fast);
+  transition: color $transition-speed-fast;
   cursor: pointer;
 
   color: $color-primary;

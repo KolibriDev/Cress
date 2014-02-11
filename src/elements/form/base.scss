@@ -16,9 +16,9 @@ input[type="week"],
 input[type="time"],
 input[type="color"] {
   @include clearfix;
-  @include box-sizing(border-box);
-  @include transition(margin $transition-speed-fast, border $transition-speed-fast, box-shadow $transition-speed-fast);
+  transition: margin $transition-speed-fast, border $transition-speed-fast, box-shadow $transition-speed-fast;
 
+  box-sizing: border-box;
   display: inline-block;
   vertical-align: bottom;
 

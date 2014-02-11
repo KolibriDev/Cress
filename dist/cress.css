@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.2.1
+  CreSS v0.3.0
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -121,6 +121,7 @@ dfn {
  */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -279,6 +280,8 @@ button[disabled], html input[disabled] {
  *    Known issue: excess padding remains in IE 6.
  */
 input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -386,10 +389,6 @@ hr {
 
 .notransition {
   -webkit-transition: none !important;
-  -khtml-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
   transition: none !important; }
 
 .noscroll {
@@ -846,10 +845,6 @@ p {
 
 a {
   -webkit-transition: color 125ms;
-  -khtml-transition: color 125ms;
-  -moz-transition: color 125ms;
-  -ms-transition: color 125ms;
-  -o-transition: color 125ms;
   transition: color 125ms;
   cursor: pointer;
   color: #ee6969;
@@ -984,9 +979,8 @@ video {
 
 [draggable] {
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -khtml-user-drag: element;
   -webkit-user-drag: element; }
@@ -1017,9 +1011,8 @@ tabs {
   position: relative; }
   tabs > nav {
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
-    -o-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     font-size: 0;
     border-bottom: 2px solid #ee6969; }
@@ -1056,10 +1049,6 @@ tabs {
   position: relative; }
   [data-tooltip]:before, [data-tooltip]:after {
     -webkit-transition: opacity 250ms;
-    -khtml-transition: opacity 250ms;
-    -moz-transition: opacity 250ms;
-    -ms-transition: opacity 250ms;
-    -o-transition: opacity 250ms;
     transition: opacity 250ms;
     opacity: 0;
     visibility: hidden;
@@ -1090,15 +1079,11 @@ tabs {
     visibility: visible; }
 
 dropdown, select, textarea, input[type="text"], input[type="search"], input[type="url"], input[type="email"], input[type="password"], input[type="tel"], input[type="number"], input[type="date"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="time"], input[type="color"] {
+  -webkit-transition: margin 125ms, border 125ms, -webkit-box-shadow 125ms;
+  transition: margin 125ms, border 125ms, box-shadow 125ms;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: margin 125ms, border 125ms, box-shadow 125ms;
-  -khtml-transition: margin 125ms, border 125ms, box-shadow 125ms;
-  -moz-transition: margin 125ms, border 125ms, box-shadow 125ms;
-  -ms-transition: margin 125ms, border 125ms, box-shadow 125ms;
-  -o-transition: margin 125ms, border 125ms, box-shadow 125ms;
-  transition: margin 125ms, border 125ms, box-shadow 125ms;
   display: inline-block;
   vertical-align: bottom;
   position: relative;
@@ -1126,9 +1111,6 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   dropdown:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="color"]:-ms-input-placeholder {
     color: rgba(65, 72, 94, 0.25);
     font-style: normal; }
-  dropdown:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder, input[type="text"]:-moz-placeholder, input[type="search"]:-moz-placeholder, input[type="url"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="date"]:-moz-placeholder, input[type="datetime-local"]:-moz-placeholder, input[type="month"]:-moz-placeholder, input[type="week"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="color"]:-moz-placeholder {
-    color: rgba(65, 72, 94, 0.25);
-    font-style: normal; }
   dropdown::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder, input[type="text"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="date"]::-moz-placeholder, input[type="datetime-local"]::-moz-placeholder, input[type="month"]::-moz-placeholder, input[type="week"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="color"]::-moz-placeholder {
     color: rgba(65, 72, 94, 0.25);
     font-style: normal; }
@@ -1143,9 +1125,6 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     color: white;
     background: #de6664; }
     dropdown.disabled:-ms-input-placeholder, dropdown[disabled]:-ms-input-placeholder, select.disabled:-ms-input-placeholder, select[disabled]:-ms-input-placeholder, textarea.disabled:-ms-input-placeholder, textarea[disabled]:-ms-input-placeholder, input[type="text"].disabled:-ms-input-placeholder, input[type="text"][disabled]:-ms-input-placeholder, input[type="search"].disabled:-ms-input-placeholder, input[type="search"][disabled]:-ms-input-placeholder, input[type="url"].disabled:-ms-input-placeholder, input[type="url"][disabled]:-ms-input-placeholder, input[type="email"].disabled:-ms-input-placeholder, input[type="email"][disabled]:-ms-input-placeholder, input[type="password"].disabled:-ms-input-placeholder, input[type="password"][disabled]:-ms-input-placeholder, input[type="tel"].disabled:-ms-input-placeholder, input[type="tel"][disabled]:-ms-input-placeholder, input[type="number"].disabled:-ms-input-placeholder, input[type="number"][disabled]:-ms-input-placeholder, input[type="date"].disabled:-ms-input-placeholder, input[type="date"][disabled]:-ms-input-placeholder, input[type="datetime-local"].disabled:-ms-input-placeholder, input[type="datetime-local"][disabled]:-ms-input-placeholder, input[type="month"].disabled:-ms-input-placeholder, input[type="month"][disabled]:-ms-input-placeholder, input[type="week"].disabled:-ms-input-placeholder, input[type="week"][disabled]:-ms-input-placeholder, input[type="time"].disabled:-ms-input-placeholder, input[type="time"][disabled]:-ms-input-placeholder, input[type="color"].disabled:-ms-input-placeholder, input[type="color"][disabled]:-ms-input-placeholder {
-      color: white;
-      font-style: normal; }
-    dropdown.disabled:-moz-placeholder, dropdown[disabled]:-moz-placeholder, select.disabled:-moz-placeholder, select[disabled]:-moz-placeholder, textarea.disabled:-moz-placeholder, textarea[disabled]:-moz-placeholder, input[type="text"].disabled:-moz-placeholder, input[type="text"][disabled]:-moz-placeholder, input[type="search"].disabled:-moz-placeholder, input[type="search"][disabled]:-moz-placeholder, input[type="url"].disabled:-moz-placeholder, input[type="url"][disabled]:-moz-placeholder, input[type="email"].disabled:-moz-placeholder, input[type="email"][disabled]:-moz-placeholder, input[type="password"].disabled:-moz-placeholder, input[type="password"][disabled]:-moz-placeholder, input[type="tel"].disabled:-moz-placeholder, input[type="tel"][disabled]:-moz-placeholder, input[type="number"].disabled:-moz-placeholder, input[type="number"][disabled]:-moz-placeholder, input[type="date"].disabled:-moz-placeholder, input[type="date"][disabled]:-moz-placeholder, input[type="datetime-local"].disabled:-moz-placeholder, input[type="datetime-local"][disabled]:-moz-placeholder, input[type="month"].disabled:-moz-placeholder, input[type="month"][disabled]:-moz-placeholder, input[type="week"].disabled:-moz-placeholder, input[type="week"][disabled]:-moz-placeholder, input[type="time"].disabled:-moz-placeholder, input[type="time"][disabled]:-moz-placeholder, input[type="color"].disabled:-moz-placeholder, input[type="color"][disabled]:-moz-placeholder {
       color: white;
       font-style: normal; }
     dropdown.disabled::-moz-placeholder, dropdown[disabled]::-moz-placeholder, select.disabled::-moz-placeholder, select[disabled]::-moz-placeholder, textarea.disabled::-moz-placeholder, textarea[disabled]::-moz-placeholder, input[type="text"].disabled::-moz-placeholder, input[type="text"][disabled]::-moz-placeholder, input[type="search"].disabled::-moz-placeholder, input[type="search"][disabled]::-moz-placeholder, input[type="url"].disabled::-moz-placeholder, input[type="url"][disabled]::-moz-placeholder, input[type="email"].disabled::-moz-placeholder, input[type="email"][disabled]::-moz-placeholder, input[type="password"].disabled::-moz-placeholder, input[type="password"][disabled]::-moz-placeholder, input[type="tel"].disabled::-moz-placeholder, input[type="tel"][disabled]::-moz-placeholder, input[type="number"].disabled::-moz-placeholder, input[type="number"][disabled]::-moz-placeholder, input[type="date"].disabled::-moz-placeholder, input[type="date"][disabled]::-moz-placeholder, input[type="datetime-local"].disabled::-moz-placeholder, input[type="datetime-local"][disabled]::-moz-placeholder, input[type="month"].disabled::-moz-placeholder, input[type="month"][disabled]::-moz-placeholder, input[type="week"].disabled::-moz-placeholder, input[type="week"][disabled]::-moz-placeholder, input[type="time"].disabled::-moz-placeholder, input[type="time"][disabled]::-moz-placeholder, input[type="color"].disabled::-moz-placeholder, input[type="color"][disabled]::-moz-placeholder {
@@ -1166,10 +1145,13 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     line-height: 28px;
     font-size: 12.8px; }
   dropdown:hover, select:hover, textarea:hover, input[type="text"]:hover, input[type="search"]:hover, input[type="url"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="tel"]:hover, input[type="number"]:hover, input[type="date"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="week"]:hover, input[type="time"]:hover, input[type="color"]:hover {
+    -webkit-box-shadow: 0 0 2px rgba(65, 72, 94, 0.5);
     box-shadow: 0 0 2px rgba(65, 72, 94, 0.5); }
   dropdown:focus, select:focus, textarea:focus, input[type="text"]:focus, input[type="search"]:focus, input[type="url"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="color"]:focus {
+    -webkit-box-shadow: 0 0 2px rgba(65, 72, 94, 0.75);
     box-shadow: 0 0 2px rgba(65, 72, 94, 0.75); }
   .error dropdown, dropdown.error, .error select, select.error, .error textarea, textarea.error, .error input[type="text"], input[type="text"].error, .error input[type="search"], input[type="search"].error, .error input[type="url"], input[type="url"].error, .error input[type="email"], input[type="email"].error, .error input[type="password"], input[type="password"].error, .error input[type="tel"], input[type="tel"].error, .error input[type="number"], input[type="number"].error, .error input[type="date"], input[type="date"].error, .error input[type="datetime-local"], input[type="datetime-local"].error, .error input[type="month"], input[type="month"].error, .error input[type="week"], input[type="week"].error, .error input[type="time"], input[type="time"].error, .error input[type="color"], input[type="color"].error {
+    -webkit-box-shadow: 0 0 2px 1px rgba(255, 0, 0, 0.75);
     box-shadow: 0 0 2px 1px rgba(255, 0, 0, 0.75); }
   dropdown.white, select.white, textarea.white, input[type="text"].white, input[type="search"].white, input[type="url"].white, input[type="email"].white, input[type="password"].white, input[type="tel"].white, input[type="number"].white, input[type="date"].white, input[type="datetime-local"].white, input[type="month"].white, input[type="week"].white, input[type="time"].white, input[type="color"].white {
     background: white;
@@ -1236,9 +1218,8 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
 
 dropdown {
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   padding: 0;
   border: 1px solid #ccc; }
@@ -1254,10 +1235,6 @@ dropdown {
     border-radius: 0; }
   dropdown > trigger {
     -webkit-transition: background 125ms;
-    -khtml-transition: background 125ms;
-    -moz-transition: background 125ms;
-    -ms-transition: background 125ms;
-    -o-transition: background 125ms;
     transition: background 125ms;
     display: block;
     pointer-events: none;
@@ -1382,21 +1359,12 @@ dropdown {
 
 checkbox {
   -webkit-transition: background, color;
-  -khtml-transition: background, color;
-  -moz-transition: background, color;
-  -ms-transition: background, color;
-  -o-transition: background, color;
   transition: background, color;
   -webkit-transition-duration: 125ms;
-  -khtml-transition-duration: 125ms;
-  -moz-transition-duration: 125ms;
-  -ms-transition-duration: 125ms;
-  -o-transition-duration: 125ms;
   transition-duration: 125ms;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   vertical-align: middle;
@@ -1445,21 +1413,12 @@ checkbox:before {
 
 radio {
   -webkit-transition: background, color;
-  -khtml-transition: background, color;
-  -moz-transition: background, color;
-  -ms-transition: background, color;
-  -o-transition: background, color;
   transition: background, color;
   -webkit-transition-duration: 125ms;
-  -khtml-transition-duration: 125ms;
-  -moz-transition-duration: 125ms;
-  -ms-transition-duration: 125ms;
-  -o-transition-duration: 125ms;
   transition-duration: 125ms;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   vertical-align: middle;
@@ -1554,10 +1513,6 @@ input[type="color"] {
 
 .button, button {
   -webkit-transition: color 125ms, background 125ms, border 125ms;
-  -khtml-transition: color 125ms, background 125ms, border 125ms;
-  -moz-transition: color 125ms, background 125ms, border 125ms;
-  -ms-transition: color 125ms, background 125ms, border 125ms;
-  -o-transition: color 125ms, background 125ms, border 125ms;
   transition: color 125ms, background 125ms, border 125ms;
   cursor: pointer;
   vertical-align: bottom;
@@ -1633,9 +1588,8 @@ input[type="color"] {
 
 nav.top {
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   margin: 0 auto;
   background-color: #ee6969; }
@@ -1659,10 +1613,6 @@ nav.top {
       font-size: 16px; }
       nav.top > ul li > a {
         -webkit-transition: background-color 125ms;
-        -khtml-transition: background-color 125ms;
-        -moz-transition: background-color 125ms;
-        -ms-transition: background-color 125ms;
-        -o-transition: background-color 125ms;
         transition: background-color 125ms;
         display: block;
         padding: 20px;
@@ -1688,10 +1638,6 @@ nav.top {
               background-color: #314559; }
       nav.top > ul li:hover > ul {
         -webkit-transition: opacity 125ms;
-        -khtml-transition: opacity 125ms;
-        -moz-transition: opacity 125ms;
-        -ms-transition: opacity 125ms;
-        -o-transition: opacity 125ms;
         transition: opacity 125ms;
         opacity: 1;
         visibility: visible; }
@@ -1733,36 +1679,6 @@ nav.breadcrumbs > ul {
   100% {
     opacity: 1; } }
 
-@-moz-keyframes fadein {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@-ms-keyframes fadein {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@-o-keyframes fadein {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
 @keyframes fadein {
   0% {
     opacity: 0; }
@@ -1775,9 +1691,8 @@ nav.breadcrumbs > ul {
 
 hero {
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: default;
   display: block;
@@ -1788,9 +1703,6 @@ hero {
   background-color: #ee6969; }
   hero inner {
     -webkit-animation: 2s fadein 1;
-    -moz-animation: 2s fadein 1;
-    -ms-animation: 2s fadein 1;
-    -o-animation: 2s fadein 1;
     animation: 2s fadein 1;
     opacity: 1;
     overflow: hidden;
@@ -1828,9 +1740,8 @@ section {
 
 footer {
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
-  -o-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: default;
   margin: 20px auto 0;

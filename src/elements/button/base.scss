@@ -1,6 +1,6 @@
 
 .button, button {
-  @include transition(color $transition-speed-fast, background $transition-speed-fast, border $transition-speed-fast);
+  transition: color $transition-speed-fast, background $transition-speed-fast, border $transition-speed-fast;
 
   cursor: pointer;
   vertical-align: bottom;

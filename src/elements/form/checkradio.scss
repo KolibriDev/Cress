@@ -4,9 +4,9 @@ checkbox {
   $checkbox-medium: $size-medium * 0.6;
   $checkbox-large: $size-large * 0.6;
 
-  @include transition(background, color);
-  @include transition-duration($transition-speed-fast);
-  @include user-select(none);
+  transition: background, color;
+  transition-duration: $transition-speed-fast;
+  user-select: none;
 
   cursor: pointer;
   vertical-align: middle;
@@ -84,9 +84,9 @@ radio {
   $radio-medium: $size-medium * 0.6;
   $radio-large: $size-large * 0.6;
 
-  @include transition(background, color);
-  @include transition-duration($transition-speed-fast);
-  @include user-select(none);
+  transition: background, color;
+  transition-duration: $transition-speed-fast;
+  user-select: none;
 
   cursor: pointer;
   vertical-align: middle;

@@ -1,11 +1,11 @@
-@include keyframes(fadein) {
+@keyframes fadein {
   0% { opacity: 0; }
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
 
 hero {
-  @include user-select(none);
+  user-select: none;
 
   cursor: default;
   display: block;
@@ -19,7 +19,7 @@ hero {
   background-color: $color-primary;
 
   inner {
-    @include animation(2s fadein 1);
+    animation: 2s fadein 1;
 
     opacity: 1;
     overflow: hidden;
