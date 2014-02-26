@@ -14,7 +14,7 @@ input[type="time"] {
   // textish elements
 }
 
-.input textarea,
+.input-wrap textarea,
 textarea {
   $textarea-line-height: rem-calc(20);
   line-height: $textarea-line-height;

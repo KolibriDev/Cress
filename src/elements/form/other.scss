@@ -2,7 +2,7 @@
 input[type="color"] {
   padding: 1px 3px !important;
 
-  &, .input & {
+  &, .input-wrap & {
     &.small { width: $element-small; }
     &,&.medium { width: $element-medium; }
     &.large { width: $element-large; }

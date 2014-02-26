@@ -29,7 +29,7 @@ input[type="color"] {
   padding: 0 $spacing;
 
   width: auto;
-  .input & { width: 100%; }
+  .input-wrap & { width: 100%; }
   height: $element-medium;
   line-height: $element-medium;
 
@@ -82,7 +82,7 @@ input[type="color"] {
   }
 }
 
-.input {
+.input-wrap {
   margin-bottom: $spacing;
   position: relative;
 
