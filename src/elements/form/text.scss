@@ -22,7 +22,7 @@ textarea {
 
   &.small {
     $padding: $size-small - 20;
-    min-height: (20px * 3) + $padding;
+    min-height: (rem-calc(20) * 3) + $padding;
     padding-top: $padding/2;
     padding-bottom: $padding/2;
   }
@@ -30,14 +30,14 @@ textarea {
   &,
   &.medium {
     $padding: $size-medium - 20;
-    min-height: (20px * 3) + $padding;
+    min-height: (rem-calc(20) * 3) + $padding;
     padding-top: $padding/2;
     padding-bottom: $padding/2;
   }
 
   &.large {
     $padding: $size-large - 20;
-    min-height: (20px * 3) + $padding;
+    min-height: (rem-calc(20) * 3) + $padding;
     padding-top: $padding/2;
     padding-bottom: $padding/2;
   }

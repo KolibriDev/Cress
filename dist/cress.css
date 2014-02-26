@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.3.0
+  CreSS v0.4.1
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -341,7 +341,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100%;
-  line-height: 1.25rem;
+  line-height: 1.25;
   font-family: 'Lucida Grande', Arial, tahoma, sans-serif;
   font-size: 16px;
   color: #333;
@@ -379,7 +379,7 @@ hr {
   background: 0;
   border: 0;
   outline: 0;
-  margin: 20px 0;
+  margin: 1.25rem 0;
   height: 1px;
   border-top: 1px solid #ccc; }
   hr:before, hr:after {
@@ -422,16 +422,16 @@ hr {
   display: inline-block; }
 
 .spacing-top {
-  margin-top: 20px; }
+  margin-top: 1.25rem; }
 
 .spacing-bottom {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25rem; }
 
 .spacing-left {
-  margin-left: 20px; }
+  margin-left: 1.25rem; }
 
 .spacing-right {
-  margin-right: 20px; }
+  margin-right: 1.25rem; }
 
 .text-center {
   text-align: center; }
@@ -471,30 +471,28 @@ row, column {
 
 .row, row {
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   width: 100%;
-  max-width: 1200px;
-  min-width: 320px; }
+  max-width: 75rem; }
   .row:before, .row:after, row:before, row:after {
     content: " ";
     display: table; }
   .row:after, row:after {
     clear: both; }
   .row .row, .col > .row, .row row, column > .row, row .row, .col > row, row row, column > row {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
     width: auto;
-    max-width: none;
-    min-width: 0; }
+    max-width: none; }
   .row .col, .row column, row .col, row column {
     float: left;
     position: relative;
     display: block;
     width: 100%;
     min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding-left: 0.625rem;
+    padding-right: 0.625rem; }
     .row .col:before, .row .col:after, .row column:before, .row column:after, row .col:before, row .col:after, row column:before, row column:after {
       content: " ";
       display: table; }
@@ -964,7 +962,7 @@ row, column {
   display: none !important; }
 
 p {
-  margin: 0 0 20px; }
+  margin: 0 0 1.25rem; }
 
 a {
   -webkit-transition: color 125ms;
@@ -1002,14 +1000,14 @@ h6 {
   font-size: 1.5rem; }
 
 hgroup {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25rem; }
   hgroup:before, hgroup:after {
     content: " ";
     display: table; }
   hgroup:after {
     clear: both; }
   hgroup h1 + h1, hgroup h1 + h2, hgroup h1 + h3, hgroup h1 + h4, hgroup h1 + h5, hgroup h1 + h6, hgroup h2 + h1, hgroup h2 + h2, hgroup h2 + h3, hgroup h2 + h4, hgroup h2 + h5, hgroup h2 + h6, hgroup h3 + h1, hgroup h3 + h2, hgroup h3 + h3, hgroup h3 + h4, hgroup h3 + h5, hgroup h3 + h6, hgroup h4 + h1, hgroup h4 + h2, hgroup h4 + h3, hgroup h4 + h4, hgroup h4 + h5, hgroup h4 + h6, hgroup h5 + h1, hgroup h5 + h2, hgroup h5 + h3, hgroup h5 + h4, hgroup h5 + h5, hgroup h5 + h6, hgroup h6 + h1, hgroup h6 + h2, hgroup h6 + h3, hgroup h6 + h4, hgroup h6 + h5, hgroup h6 + h6 {
-    margin-top: -10px; }
+    margin-top: -0.625rem; }
   hgroup :last-child {
     margin-bottom: 0; }
 
@@ -1018,8 +1016,8 @@ icon, checkbox:before, radio:before, [icon] {
 
 icon.circle, [icon].circle {
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   position: relative;
   font-size: 1rem;
   line-height: 2.125rem;
@@ -1030,8 +1028,8 @@ icon.circle, [icon].circle {
   icon.circle.right:after, icon.circle:before, [icon].circle.right:after, [icon].circle:before {
     display: block;
     margin: 0 auto;
-    width: 30px;
-    height: 30px; }
+    width: 1.875rem;
+    height: 1.875rem; }
   icon.circle.primary, [icon].circle.primary {
     background: #ee6969;
     color: white; }
@@ -1046,12 +1044,12 @@ img {
   max-width: 100%; }
   img.full {
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.25rem;
     width: 100%; }
 
 figure {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 1.25rem;
   padding: 0;
   position: relative; }
   figure:before, figure:after {
@@ -1064,14 +1062,14 @@ figure {
     width: 100%; }
   figure > figcaption {
     margin: 0;
-    padding: 10px;
+    padding: 0.625rem;
     font-size: 0.8rem;
     color: #ededeb;
     background: #41485e; }
 
 video {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 1.25rem;
   max-width: 100%; }
 
 .box {
@@ -1079,9 +1077,9 @@ video {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-  padding: 20px 20px 0;
-  border-radius: 4px; }
+  margin-bottom: 1.25rem;
+  padding: 1.25rem 1.25rem 0;
+  border-radius: 0.25rem; }
   .box:before, .box:after {
     content: " ";
     display: table; }
@@ -1126,11 +1124,11 @@ hl {
     display: inline-block;
     font-size: 1rem; }
     hl li + li {
-      margin-left: 20px; }
+      margin-left: 1.25rem; }
 
 tabs {
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 1.25rem;
   position: relative; }
   tabs > nav {
     -webkit-user-select: none;
@@ -1142,8 +1140,8 @@ tabs {
     tabs > nav > tab {
       cursor: pointer;
       display: inline-block;
-      padding: 0 20px;
-      line-height: 2.5rem;
+      padding: 0 1.25rem;
+      line-height: 0.15625rem;
       font-size: 16px;
       color: #ededeb;
       background: #41485e; }
@@ -1156,7 +1154,7 @@ tabs {
         pointer-events: none; }
   tabs > tab {
     display: block;
-    padding: 20px 20px 0;
+    padding: 1.25rem 1.25rem 0;
     background: white; }
     tabs > tab:before, tabs > tab:after {
       content: " ";
@@ -1181,14 +1179,14 @@ tabs {
     content: attr(data-tooltip);
     display: block;
     white-space: nowrap;
-    padding: 0 5px;
+    padding: 0 0.3125rem;
     height: 20px;
     line-height: 22px;
     top: -30px;
     font-size: 10px;
     color: white;
     background: #ee6969;
-    border-radius: 4px; }
+    border-radius: 0.25rem; }
   [data-tooltip]:after {
     content: '';
     width: 0;
@@ -1212,15 +1210,15 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   position: relative;
   z-index: auto;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 1.25rem;
   width: auto;
-  height: 40px;
-  line-height: 40px;
+  height: 2.5rem;
+  line-height: 2.5rem;
   font-size: 16px;
   color: #333;
   outline: none;
   border: 0;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   background: white;
   -webkit-appearance: none;
   -moz-appearance: none; }
@@ -1260,12 +1258,12 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
       color: white;
       font-style: normal; }
   dropdown.large, select.large, textarea.large, input[type="text"].large, input[type="search"].large, input[type="url"].large, input[type="email"].large, input[type="password"].large, input[type="tel"].large, input[type="number"].large, input[type="date"].large, input[type="datetime-local"].large, input[type="month"].large, input[type="week"].large, input[type="time"].large, input[type="color"].large {
-    height: 60px;
-    line-height: 58px;
+    height: 3.75rem;
+    line-height: 1.75rem;
     font-size: 19.2px; }
   dropdown.small, select.small, textarea.small, input[type="text"].small, input[type="search"].small, input[type="url"].small, input[type="email"].small, input[type="password"].small, input[type="tel"].small, input[type="number"].small, input[type="date"].small, input[type="datetime-local"].small, input[type="month"].small, input[type="week"].small, input[type="time"].small, input[type="color"].small {
-    height: 30px;
-    line-height: 28px;
+    height: 1.875rem;
+    line-height: -0.125rem;
     font-size: 12.8px; }
   dropdown:hover, select:hover, textarea:hover, input[type="text"]:hover, input[type="search"]:hover, input[type="url"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="tel"]:hover, input[type="number"]:hover, input[type="date"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="week"]:hover, input[type="time"]:hover, input[type="color"]:hover {
     -webkit-box-shadow: 0 0 2px rgba(65, 72, 94, 0.5);
@@ -1281,10 +1279,10 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     border: 1px #ccc solid; }
 
 .input {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   position: relative; }
   .input.tight {
-    margin-bottom: 10px; }
+    margin-bottom: 0.625rem; }
   .input label {
     display: block;
     margin: 0;
@@ -1292,15 +1290,15 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     font-size: 0.875rem;
     text-align: left; }
     .input label.small {
-      line-height: 28px;
+      line-height: -0.125rem;
       font-size: 12.8px; }
     .input label.large {
-      line-height: 58px;
+      line-height: 1.75rem;
       font-size: 19.2px; }
     .input label.inline {
       display: inline-block;
       vertical-align: bottom;
-      padding: 0 10px; }
+      padding: 0 0.625rem; }
   .input.side {
     padding-left: 150px;
     position: relative; }
@@ -1324,17 +1322,17 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   resize: vertical;
   overflow: auto; }
   .input textarea.small, textarea.small {
-    min-height: 70px;
-    padding-top: 5px;
-    padding-bottom: 5px; }
+    min-height: -14.375rem;
+    padding-top: -9.0625rem;
+    padding-bottom: -9.0625rem; }
   .input textarea, .input textarea.medium, textarea, textarea.medium {
-    min-height: 80px;
-    padding-top: 10px;
-    padding-bottom: 10px; }
+    min-height: -13.75rem;
+    padding-top: -8.75rem;
+    padding-bottom: -8.75rem; }
   .input textarea.large, textarea.large {
-    min-height: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px; }
+    min-height: -12.5rem;
+    padding-top: -8.125rem;
+    padding-bottom: -8.125rem; }
   .input textarea.disabled, .input textarea[disabled], textarea.disabled, textarea[disabled] {
     resize: none;
     overflow: auto; }
@@ -1361,7 +1359,7 @@ dropdown {
     transition: background 125ms;
     display: block;
     pointer-events: none;
-    width: 40px;
+    width: 2.5rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -1372,7 +1370,7 @@ dropdown {
       width: 0;
       border-color: transparent;
       border-style: solid;
-      border-width: 5px;
+      border-width: 0.3125rem;
       border-top-color: #41485e;
       content: '';
       margin: auto auto auto 0;
@@ -1384,9 +1382,9 @@ dropdown {
       content: '';
       display: block;
       margin: auto;
-      width: 1.25rem;
-      height: 1.25rem;
-      line-height: 1.4375rem;
+      width: 0.07812rem;
+      height: 0.07812rem;
+      line-height: 0.26562rem;
       position: absolute;
       top: 0;
       left: 0;
@@ -1397,7 +1395,7 @@ dropdown {
   dropdown > .label {
     display: none;
     cursor: pointer;
-    padding: 0 60px 0 20px;
+    padding: 0 3.75rem 0 1.25rem;
     font-weight: bold;
     text-align: left;
     color: #41485e; }
@@ -1424,7 +1422,7 @@ dropdown {
     top: 100%;
     right: 0;
     z-index: 99;
-    border-radius: 0 0 4px 4px; }
+    border-radius: 0 0 0.25rem 0.25rem; }
     .no-touch dropdown > .option-wrap:before {
       content: '';
       display: block;
@@ -1445,7 +1443,7 @@ dropdown {
       display: block;
       cursor: pointer;
       white-space: nowrap;
-      padding: 0 20px;
+      padding: 0 1.25rem;
       width: 100%;
       font-size: 0.875rem;
       font-weight: normal;
@@ -1493,11 +1491,11 @@ checkbox {
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  line-height: 1.75rem; }
+  line-height: 0.34375rem; }
   checkbox.small {
-    line-height: 1.375rem; }
+    line-height: 0.32031rem; }
   checkbox.large {
-    line-height: 2.5rem; }
+    line-height: 0.39062rem; }
   checkbox:before {
     content: 'X';
     display: inline-block;
@@ -1505,14 +1503,14 @@ checkbox {
     text-align: center;
     color: #ccc;
     background: rgba(65, 72, 94, 0.1);
-    width: 1.5rem;
-    height: 1.5rem; }
+    width: 0.09375rem;
+    height: 0.09375rem; }
     checkbox:before.small {
-      width: 1.125rem;
-      height: 1.125rem; }
+      width: 0.07031rem;
+      height: 0.07031rem; }
     checkbox:before.large {
-      width: 2.25rem;
-      height: 2.25rem; }
+      width: 0.14062rem;
+      height: 0.14062rem; }
   checkbox[checked]:before {
     background: #ee6969;
     color: white; }
@@ -1525,14 +1523,14 @@ checkbox {
     top: 100%;
     left: 0; }
   checkbox[data-label] {
-    padding: 0 5px; }
+    padding: 0 0.3125rem; }
     checkbox[data-label]:after {
       content: attr(data-label);
-      padding-left: 10px;
+      padding-left: 0.625rem;
       font-size: 0.875rem; }
 
 checkbox:before {
-  border-radius: 4px; }
+  border-radius: 0.25rem; }
 
 radio {
   -webkit-transition: background, color;
@@ -1547,11 +1545,11 @@ radio {
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  line-height: 1.75rem; }
+  line-height: 0.34375rem; }
   radio.small {
-    line-height: 1.375rem; }
+    line-height: 0.32031rem; }
   radio.large {
-    line-height: 2.5rem; }
+    line-height: 0.39062rem; }
   radio:before {
     content: '\221A';
     display: inline-block;
@@ -1559,14 +1557,14 @@ radio {
     text-align: center;
     color: #ccc;
     background: rgba(65, 72, 94, 0.1);
-    width: 1.5rem;
-    height: 1.5rem; }
+    width: 0.09375rem;
+    height: 0.09375rem; }
     radio:before.small {
-      width: 1.125rem;
-      height: 1.125rem; }
+      width: 0.07031rem;
+      height: 0.07031rem; }
     radio:before.large {
-      width: 2.25rem;
-      height: 2.25rem; }
+      width: 0.14062rem;
+      height: 0.14062rem; }
   radio[checked]:before {
     background: #ee6969;
     color: white; }
@@ -1579,10 +1577,10 @@ radio {
     top: 100%;
     left: 0; }
   radio[data-label] {
-    padding: 0 5px; }
+    padding: 0 0.3125rem; }
     radio[data-label]:after {
       content: attr(data-label);
-      padding-left: 10px;
+      padding-left: 0.625rem;
       font-size: 0.875rem; }
 
 radio:before {
@@ -1592,11 +1590,11 @@ radio:before {
 input[type="color"] {
   padding: 1px 3px !important; }
   input[type="color"].small, .input input[type="color"].small {
-    width: 30px; }
+    width: 1.875rem; }
   input[type="color"], input[type="color"].medium, .input input[type="color"], .input input[type="color"].medium {
-    width: 40px; }
+    width: 2.5rem; }
   input[type="color"].large, .input input[type="color"].large {
-    width: 60px; }
+    width: 3.75rem; }
 
 .form-group {
   margin-bottom: 0;
@@ -1610,9 +1608,9 @@ input[type="color"] {
   .form-group > button, .form-group > .button, .form-group > dropdown, .form-group > select, .form-group > textarea, .form-group > input[type="text"], .form-group > input[type="search"], .form-group > input[type="url"], .form-group > input[type="email"], .form-group > input[type="password"], .form-group > input[type="tel"], .form-group > input[type="number"], .form-group > input[type="date"], .form-group > input[type="datetime-local"], .form-group > input[type="month"], .form-group > input[type="week"], .form-group > input[type="time"], .form-group > input[type="color"], .form-group > .form-group {
     display: inline-block;
     vertical-align: top;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px; }
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    margin-bottom: 1.25rem; }
     .form-group > button span, .form-group > .button span, .form-group > dropdown span, .form-group > select span, .form-group > textarea span, .form-group > input[type="text"] span, .form-group > input[type="search"] span, .form-group > input[type="url"] span, .form-group > input[type="email"] span, .form-group > input[type="password"] span, .form-group > input[type="tel"] span, .form-group > input[type="number"] span, .form-group > input[type="date"] span, .form-group > input[type="datetime-local"] span, .form-group > input[type="month"] span, .form-group > input[type="week"] span, .form-group > input[type="time"] span, .form-group > input[type="color"] span, .form-group > .form-group span {
       font-size: 14px; }
     .form-group > button:first-child, .form-group > .button:first-child, .form-group > dropdown:first-child, .form-group > select:first-child, .form-group > textarea:first-child, .form-group > input[type="text"]:first-child, .form-group > input[type="search"]:first-child, .form-group > input[type="url"]:first-child, .form-group > input[type="email"]:first-child, .form-group > input[type="password"]:first-child, .form-group > input[type="tel"]:first-child, .form-group > input[type="number"]:first-child, .form-group > input[type="date"]:first-child, .form-group > input[type="datetime-local"]:first-child, .form-group > input[type="month"]:first-child, .form-group > input[type="week"]:first-child, .form-group > input[type="time"]:first-child, .form-group > input[type="color"]:first-child, .form-group > .form-group:first-child {
@@ -1625,12 +1623,12 @@ input[type="color"] {
     border-radius: 0; }
     .form-group.combine > button:first-child, .form-group.combine > .button:first-child, .form-group.combine > dropdown:first-child, .form-group.combine > select:first-child, .form-group.combine > textarea:first-child, .form-group.combine > input[type="text"]:first-child, .form-group.combine > input[type="search"]:first-child, .form-group.combine > input[type="url"]:first-child, .form-group.combine > input[type="email"]:first-child, .form-group.combine > input[type="password"]:first-child, .form-group.combine > input[type="tel"]:first-child, .form-group.combine > input[type="number"]:first-child, .form-group.combine > input[type="date"]:first-child, .form-group.combine > input[type="datetime-local"]:first-child, .form-group.combine > input[type="month"]:first-child, .form-group.combine > input[type="week"]:first-child, .form-group.combine > input[type="time"]:first-child, .form-group.combine > input[type="color"]:first-child, .form-group.combine > .form-group:first-child {
       border-left-width: 1px;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px; }
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem; }
     .form-group.combine > button:last-child, .form-group.combine > .button:last-child, .form-group.combine > dropdown:last-child, .form-group.combine > select:last-child, .form-group.combine > textarea:last-child, .form-group.combine > input[type="text"]:last-child, .form-group.combine > input[type="search"]:last-child, .form-group.combine > input[type="url"]:last-child, .form-group.combine > input[type="email"]:last-child, .form-group.combine > input[type="password"]:last-child, .form-group.combine > input[type="tel"]:last-child, .form-group.combine > input[type="number"]:last-child, .form-group.combine > input[type="date"]:last-child, .form-group.combine > input[type="datetime-local"]:last-child, .form-group.combine > input[type="month"]:last-child, .form-group.combine > input[type="week"]:last-child, .form-group.combine > input[type="time"]:last-child, .form-group.combine > input[type="color"]:last-child, .form-group.combine > .form-group:last-child {
       border-right-width: 1px;
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px; }
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem; }
   .form-group .form-group {
     margin-bottom: 0; }
 
@@ -1645,22 +1643,22 @@ input[type="color"] {
   position: relative;
   text-align: center;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   outline: none; }
   .button.small, button.small {
-    padding: 0 10px;
-    height: 30px;
-    line-height: 30px;
+    padding: 0 0.625rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
     font-size: 12.8px; }
   .button, .button.medium, button, button.medium {
-    padding: 0 20px;
-    height: 40px;
-    line-height: 40px;
+    padding: 0 1.25rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
     font-size: 16px; }
   .button.large, button.large {
-    padding: 0 30px;
-    height: 60px;
-    line-height: 60px;
+    padding: 0 1.875rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
     font-size: 19.2px; }
   .button span, button span {
     display: inline-block; }
@@ -1669,7 +1667,7 @@ input[type="color"] {
     text-overflow: ellipsis;
     white-space: nowrap;
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.25rem;
     width: 100%; }
   .button.caps, button.caps {
     text-transform: uppercase; }
@@ -1738,7 +1736,7 @@ nav.top {
         -webkit-transition: background-color 125ms;
         transition: background-color 125ms;
         display: block;
-        padding: 20px;
+        padding: 1.25rem;
         line-height: 1.25rem;
         color: white; }
       nav.top > ul li:hover > a, nav.top > ul li > a:hover {
@@ -1755,7 +1753,7 @@ nav.top {
           display: block; }
           nav.top > ul li > ul > li > a {
             white-space: nowrap;
-            padding: 10px 20px;
+            padding: 0.625rem 1.25rem;
             background: #41485e; }
             nav.top > ul li > ul > li > a:hover {
               background-color: #314559; }
@@ -1774,11 +1772,11 @@ nav.breadcrumbs > ul {
   font-size: 0; }
   nav.breadcrumbs > ul > li {
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 1.25rem;
     font-size: 0; }
     nav.breadcrumbs > ul > li > a {
       display: inline-block;
-      padding: 10px 5px;
+      padding: 0.625rem 0.3125rem;
       line-height: 1.25rem;
       font-size: 16px; }
       nav.breadcrumbs > ul > li > a:hover {
@@ -1788,7 +1786,7 @@ nav.breadcrumbs > ul {
       nav.breadcrumbs > ul > li + li:before {
         content: '>';
         display: inline-block;
-        padding: 10px 5px;
+        padding: 0.625rem 0.3125rem;
         line-height: 1.25rem;
         font-size: 16px; }
 
@@ -1819,7 +1817,7 @@ hero {
   user-select: none;
   cursor: default;
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 1.25rem;
   height: 600px;
   position: relative;
   z-index: 20;
@@ -1831,7 +1829,7 @@ hero {
     overflow: hidden;
     display: block;
     margin: auto;
-    padding: 0 5px;
+    padding: 0 0.3125rem;
     width: 100%;
     max-width: 600px;
     line-height: 5rem;
@@ -1843,11 +1841,11 @@ hero {
     background-color: #41485e; }
 
 section {
-  padding-top: 3.75rem;
-  padding-bottom: 2.5rem; }
+  padding-top: 0.23438rem;
+  padding-bottom: 0.15625rem; }
   @media only screen and (min-width:40.0625rem) {
     section {
-      padding-bottom: 1.25rem; } }
+      padding-bottom: 0.07812rem; } }
   section.primary {
     background-color: #ee6969;
     color: #ededeb; }
@@ -1867,8 +1865,8 @@ footer {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
-  margin: 20px auto 0;
-  padding: 20px 20px 0;
+  margin: 1.25rem auto 0;
+  padding: 1.25rem 1.25rem 0;
   font-size: 0.75rem;
   text-align: center;
   color: white;

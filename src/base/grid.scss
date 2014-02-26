@@ -43,7 +43,6 @@ row, column { display: block; }
 
   width: 100%;
   max-width: $page-max-width;
-  min-width: $page-min-width;
 
   .row, .col > &,
   row, column > & {
@@ -51,7 +50,6 @@ row, column { display: block; }
     margin-right: -$grid-gutter;
     width: auto;
     max-width: none;
-    min-width: 0;
   }
 
   .col, column {

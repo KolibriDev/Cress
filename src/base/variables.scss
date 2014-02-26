@@ -1,15 +1,30 @@
+// Typography
+$font-family: 'Lucida Grande', Arial, tahoma, sans-serif;
+$font-family-alt: 'Georgia', $font-family;
+$font-size: 16px;
+$font-color: #333;
+$line-height: 1.25;
+
+$font-size-small: $font-size * .8;
+$font-size-medium: $font-size;
+$font-size-large: $font-size * 1.2;
+
+$heading-font-family: $font-family-alt;
+$heading-font-weight: bold;
+$heading-text-transform: none;
+
 // Sizes
-$spacing: 20px;
-$page-max-width: 1200px;
-$page-min-width: 320px;
-$radius: 4px;
+$spacing: rem-calc(20);
+$page-max-width: rem-calc(1200);
+$page-min-width: rem-calc(320);
+$radius: rem-calc(4);
 $box-radius: $radius;
 $form-radius: $radius;
 $button-radius: $form-radius;
 
-$size-small: 30px;
-$size-medium: 40px;
-$size-large: 60px;
+$size-small: rem-calc(30);
+$size-medium: rem-calc(40);
+$size-large: rem-calc(60);
 
 // Grayscale
 $color-black: #000;
@@ -36,21 +51,6 @@ $color-secondary-darker: $color-blue-darker;
 $color-border: $color-primary;
 
 $body-bg: $color-light;
-
-// Typography
-$font-family: 'Lucida Grande', Arial, tahoma, sans-serif;
-$font-family-alt: 'Georgia', $font-family;
-$font-size: 16px;
-$font-color: #333;
-$line-height: rem-calc(20);
-
-$font-size-small: $font-size * .8;
-$font-size-medium: $font-size;
-$font-size-large: $font-size * 1.2;
-
-$heading-font-family: $font-family-alt;
-$heading-font-weight: bold;
-$heading-text-transform: none;
 
 // Text direction & floats
 $text-direction: ltr !default;
