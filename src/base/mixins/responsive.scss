@@ -5,36 +5,36 @@
 
 @mixin respond-to($media) {
   @if $media == small {
-    @media #{$media-small-screen} { @content; }
+    @media #{$small-up} { @content; }
   }
   @else if $media == medium {
-    @media #{$media-medium-screen} { @content; }
+    @media #{$medium-up} { @content; }
   }
   @else if $media == large {
-    @media #{$media-large-screen} { @content; }
+    @media #{$large-up} { @content; }
   }
 
-  @else if $media == medium-up {
-    @media #{$media-medium-screen-up} { @content; }
+  @else if $media == small-only {
+    @media #{$small-only} { @content; }
   }
-  @else if $media == large-up {
-    @media #{$media-large-screen-up} { @content; }
+  @else if $media == medium-only {
+    @media #{$medium-only} { @content; }
   }
-  @else if $media == full-up {
-    @media #{$media-full-screen-up} { @content; }
+  @else if $media == large-only {
+    @media #{$large-only} { @content; }
   }
 
   @else if $media == landscape {
-    @media #{$media-landscape} { @content; }
+    @media #{$landscape} { @content; }
   }
   @else if $media == portrait {
-    @media #{$media-portrait} { @content; }
+    @media #{$portrait} { @content; }
   }
   @else if $media == retina {
-    @media #{$media-retina} { @content; }
+    @media #{$retina} { @content; }
   }
 
   @else if type-of($media) == number {
-    @media only screen and (max-width: $media) { @content; }
+    @media only screen and (min-width: $media) { @content; }
   }
 }

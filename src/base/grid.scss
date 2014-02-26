@@ -4,16 +4,35 @@ row, column { display: block; }
   @function grid-calc($colNumber, $totalColumns: $grid-count) {
     @return percentage($colNumber / $totalColumns);
   }
-  @mixin grid-columns($name: 'span') {
-    &.#{$name}-center {
+  @mixin grid-columns($className: 'span') {
+    @for $col from 1 through $grid-count {
+      &.#{$className}-#{$col} { width: grid-calc($col); }
+    }
+  }
+  @mixin grid-center($className: 'span') {
+    &.#{$className}-centered {
       margin-#{$default-float}: auto;
       margin-#{$opposite-float}: auto;
       float: none !important;
       clear: both;
     }
-    @for $col from 0 through $grid-count {
-      &.#{$name}-#{$col} { width: grid-calc($col); }
-      &.#{$name}-offset-#{$col} { margin-left: grid-calc($col); }
+  }
+  @mixin grid-offset($className: '') {
+    @if($className != '') {
+      $className: "#{$className}-";
+    }
+    @for $col from 1 through $grid-count {
+      &.#{$className}offset-#{$col} { margin-left: grid-calc($col); }
+    }
+  }
+  @mixin grid-ordering($className: '') {
+    @if($className != '') {
+      $className: "#{$className}-";
+    }
+
+    @for $col from 1 through $grid-count {
+      &.#{$className}push-#{$col} { left: grid-calc($col); }
+      &.#{$className}pull-#{$col} { right: grid-calc($col); }
     }
   }
 
@@ -38,42 +57,54 @@ row, column { display: block; }
   .col, column {
     @include clearfix;
     float: $default-float;
+    position: relative;
     display: block;
+    width: 100%;
 
     min-height: 1px;
     padding-left: $grid-gutter/2;
     padding-right: $grid-gutter/2;
 
-    @include grid-columns('full');
-
-    &.center, &[center] {
+    &.col-centered {
       margin-#{$default-float}: auto;
       margin-#{$opposite-float}: auto;
       float: none !important;
       clear: both;
     }
 
-    &.reverse, &[reverse] { float: $opposite-float; }
+    &.right { float: $opposite-float; }
 
-    @if $mobile-first {
-      @include respond-to(medium-up) { @include grid-columns('medium-up'); }
-      @include respond-to(large-up) { @include grid-columns('large-up'); }
-      @include respond-to(full-up) { @include grid-columns('full-up'); }
+    @include respond-to(small) { @include grid-columns('small'); }
+    @include respond-to(medium) { @include grid-columns('medium'); }
+    @include respond-to(large) { @include grid-columns('large'); }
+
+    @include grid-offset();
+    @include grid-ordering();
+
+    @include respond-to(small-only) {
+      @include grid-center('small');
+      @include grid-offset('small');
+      @include grid-ordering('small');
     }
-    @else {
-      @include respond-to(large) { @include grid-columns('large'); }
-      @include respond-to(medium) { @include grid-columns('medium'); }
-      @include respond-to(small) { @include grid-columns('small'); }
+    @include respond-to(medium-only) {
+      @include grid-center('medium');
+      @include grid-offset('medium');
+      @include grid-ordering('medium');
+    }
+    @include respond-to(large-only) {
+      @include grid-center('large');
+      @include grid-offset('large');
+      @include grid-ordering('large');
     }
   }
 
-  &.reverse, &[reverse] {
+  &.row-reverse {
     > .col, > column {
       float: $opposite-float;
     }
   }
 
-  &.no-gutter, &[no-gutter] {
+  &.no-gutter {
     margin-left: 0;
     margin-right: 0;
     padding-left: 0;
@@ -83,11 +114,5 @@ row, column { display: block; }
       padding-left: 0;
       padding-right: 0;
     }
-  }
-
-  > hr {
-    clear: both;
-    margin-left: -$grid-gutter/2;
-    margin-right: -$grid-gutter/2;
   }
 }
