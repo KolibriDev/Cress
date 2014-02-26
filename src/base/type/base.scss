@@ -20,34 +20,34 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em;
   padding: 0;
 
-  line-height: 1em;
+  line-height: $heading-line-height;
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   text-transform: $heading-text-transform;
 }
 
 h1 {
-  font-size: rem-calc($font-size*4);
+  font-size: rem-calc(32);
 }
 
 h2 {
-  font-size: rem-calc($font-size*3);
+  font-size: rem-calc(28);
 }
 
 h3 {
-  font-size: rem-calc($font-size*2.5);
+  font-size: rem-calc(24);
 }
 
 h4 {
-  font-size: rem-calc($font-size*2.25);
+  font-size: rem-calc(20);
 }
 
 h5 {
-  font-size: rem-calc($font-size*2);
+  font-size: rem-calc(18);
 }
 
 h6 {
-  font-size: rem-calc($font-size*1.5);
+  font-size: rem-calc(16);
 }
 
 hgroup {
