@@ -62,3 +62,29 @@ hgroup {
 
   :last-child { margin-bottom: 0; }
 }
+
+.text-tiny { font-size: rem-calc($font-size * 0.75); }
+.text-small { font-size: rem-calc($font-size  * 0.875); }
+.text-large { font-size: rem-calc($font-size * 1.125); }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+@include respond-to(large-only) {
+  .large-text-center { text-align: center; }
+  .large-text-left { text-align: left; }
+  .large-text-right { text-align: right; }
+}
+
+@include respond-to(medium-only) {
+  .medium-text-center { text-align: center; }
+  .medium-text-left { text-align: left; }
+  .medium-text-right { text-align: right; }
+}
+
+@include respond-to(small-only) {
+  .small-text-center { text-align: center; }
+  .small-text-left { text-align: left; }
+  .small-text-right { text-align: right; }
+}

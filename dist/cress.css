@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.5.0
+  CreSS v0.5.3
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -420,39 +420,6 @@ hr {
 
 .float-left {
   float: left; }
-
-.text-center {
-  text-align: center; }
-
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
-
-@media only screen and (min-width:64.0625rem) {
-  .large-text-center {
-    text-align: center; }
-  .large-text-left {
-    text-align: left; }
-  .large-text-right {
-    text-align: right; } }
-
-@media only screen and (min-width:40.0625rem) and (max-width:64rem) {
-  .medium-text-center {
-    text-align: center; }
-  .medium-text-left {
-    text-align: left; }
-  .medium-text-right {
-    text-align: right; } }
-
-@media only screen and (max-width: 40rem) {
-  .small-text-center {
-    text-align: center; }
-  .small-text-left {
-    text-align: left; }
-  .small-text-right {
-    text-align: right; } }
 
 row, column {
   display: block; }
@@ -995,6 +962,48 @@ hgroup {
   hgroup :last-child {
     margin-bottom: 0; }
 
+.text-tiny {
+  font-size: 0.75rem; }
+
+.text-small {
+  font-size: 0.875rem; }
+
+.text-large {
+  font-size: 1.125rem; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+@media only screen and (min-width:64.0625rem) {
+  .large-text-center {
+    text-align: center; }
+  .large-text-left {
+    text-align: left; }
+  .large-text-right {
+    text-align: right; } }
+
+@media only screen and (min-width:40.0625rem) and (max-width:64rem) {
+  .medium-text-center {
+    text-align: center; }
+  .medium-text-left {
+    text-align: left; }
+  .medium-text-right {
+    text-align: right; } }
+
+@media only screen and (max-width: 40rem) {
+  .small-text-center {
+    text-align: center; }
+  .small-text-left {
+    text-align: left; }
+  .small-text-right {
+    text-align: right; } }
+
 icon, checkbox:before, radio:before, [icon] {
   display: inline-block; }
 
@@ -1211,7 +1220,7 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     display: table; }
   dropdown:after, select:after, textarea:after, input[type="text"]:after, input[type="search"]:after, input[type="url"]:after, input[type="email"]:after, input[type="password"]:after, input[type="tel"]:after, input[type="number"]:after, input[type="date"]:after, input[type="datetime-local"]:after, input[type="month"]:after, input[type="week"]:after, input[type="time"]:after, input[type="color"]:after {
     clear: both; }
-  .input dropdown, .input select, .input textarea, .input input[type="text"], .input input[type="search"], .input input[type="url"], .input input[type="email"], .input input[type="password"], .input input[type="tel"], .input input[type="number"], .input input[type="date"], .input input[type="datetime-local"], .input input[type="month"], .input input[type="week"], .input input[type="time"], .input input[type="color"] {
+  .input-wrap dropdown, .input-wrap select, .input-wrap textarea, .input-wrap input[type="text"], .input-wrap input[type="search"], .input-wrap input[type="url"], .input-wrap input[type="email"], .input-wrap input[type="password"], .input-wrap input[type="tel"], .input-wrap input[type="number"], .input-wrap input[type="date"], .input-wrap input[type="datetime-local"], .input-wrap input[type="month"], .input-wrap input[type="week"], .input-wrap input[type="time"], .input-wrap input[type="color"] {
     width: 100%; }
   dropdown:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="color"]:-ms-input-placeholder {
     color: rgba(65, 72, 94, 0.25);
@@ -1262,62 +1271,62 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     background: white;
     border: 1px #ccc solid; }
 
-.input {
+.input-wrap {
   margin-bottom: 1.25rem;
   position: relative; }
-  .input.tight {
+  .input-wrap.tight {
     margin-bottom: 0.625rem; }
-  .input label {
+  .input-wrap label {
     display: block;
     margin: 0;
     font-weight: normal;
     font-size: 0.875rem;
     text-align: left; }
-    .input label.small {
+    .input-wrap label.small {
       line-height: -0.125rem;
       font-size: 0.8rem; }
-    .input label.large {
+    .input-wrap label.large {
       line-height: 1.75rem;
       font-size: 1.75rem; }
-    .input label.inline {
+    .input-wrap label.inline {
       display: inline-block;
       vertical-align: bottom;
       padding: 0 0.625rem; }
-  .input.side {
+  .input-wrap.side {
     padding-left: 150px;
     position: relative; }
-    .input.side > label:first-child {
+    .input-wrap.side > label:first-child {
       max-width: 150px;
       position: absolute;
       top: 0;
       left: 0; }
     @media only screen and (min-width: 450px) {
-      .input.side {
+      .input-wrap.side {
         padding-left: 0; }
-        .input.side > label:first-child {
+        .input-wrap.side > label:first-child {
           max-width: none;
           position: static; } }
-  .input.error label {
+  .input-wrap.error label {
     color: red; }
 
 
-.input textarea, textarea {
+.input-wrap textarea, textarea {
   line-height: 1.25rem;
   resize: vertical;
   overflow: auto; }
-  .input textarea.small, textarea.small {
+  .input-wrap textarea.small, textarea.small {
     min-height: 4.375rem;
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem; }
-  .input textarea, .input textarea.medium, textarea, textarea.medium {
+  .input-wrap textarea, .input-wrap textarea.medium, textarea, textarea.medium {
     min-height: 5rem;
     padding-top: 0.625rem;
     padding-bottom: 0.625rem; }
-  .input textarea.large, textarea.large {
+  .input-wrap textarea.large, textarea.large {
     min-height: 6.25rem;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem; }
-  .input textarea.disabled, .input textarea[disabled], textarea.disabled, textarea[disabled] {
+  .input-wrap textarea.disabled, .input-wrap textarea[disabled], textarea.disabled, textarea[disabled] {
     resize: none;
     overflow: auto; }
 
@@ -1573,11 +1582,11 @@ radio:before {
 
 input[type="color"] {
   padding: 1px 3px !important; }
-  input[type="color"].small, .input input[type="color"].small {
+  input[type="color"].small, .input-wrap input[type="color"].small {
     width: 1.875rem; }
-  input[type="color"], input[type="color"].medium, .input input[type="color"], .input input[type="color"].medium {
+  input[type="color"], input[type="color"].medium, .input-wrap input[type="color"], .input-wrap input[type="color"].medium {
     width: 2.5rem; }
-  input[type="color"].large, .input input[type="color"].large {
+  input[type="color"].large, .input-wrap input[type="color"].large {
     width: 3.75rem; }
 
 .button-group, .form-group {
