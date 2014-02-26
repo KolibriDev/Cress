@@ -50,7 +50,7 @@ nav {
               padding: $spacing/2 $spacing;
               background: $color-secondary;
 
-              &:hover { background-color: $color-secondary-darker; }
+              &:hover { background-color: darken($color-secondary,5%); }
             }
           }
         }

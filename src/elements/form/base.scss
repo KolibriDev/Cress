@@ -30,10 +30,10 @@ input[type="color"] {
 
   width: auto;
   .input & { width: 100%; }
-  height: $size-medium;
-  line-height: $size-medium;
+  height: $element-medium;
+  line-height: $element-medium;
 
-  font-size: $font-size-medium;
+  font-size: $element-font-medium;
   color: $font-color;
 
   outline: none;
@@ -52,23 +52,23 @@ input[type="color"] {
   &[disabled] {
     -webkit-font-smoothing: antialiased;
     color: white;
-    background: $color-primary-darker;
+    background: darken($color-primary,10%);
 
     @include placeholder(white);
   }
 
   &.large {
-    height: $size-large;
-    line-height: $size-large - 2;
+    height: $element-large;
+    line-height: $element-large - 2;
 
-    font-size: $font-size-large;
+    font-size: $element-font-large;
   }
 
   &.small {
-    height: $size-small;
-    line-height: $size-small - 2;
+    height: $element-small;
+    line-height: $element-small - 2;
 
-    font-size: $font-size-small;
+    font-size: $element-font-small;
   }
 
   &:hover { box-shadow: 0 0 2px rgba($color-secondary,0.5); }
@@ -98,13 +98,13 @@ input[type="color"] {
     text-align: left;
 
     &.small {
-      line-height: $size-small - 2;
-      font-size: $font-size-small;
+      line-height: $element-small - 2;
+      font-size: $element-font-small;
     }
 
     &.large {
-      line-height: $size-large - 2;
-      font-size: $font-size-large;
+      line-height: $element-large - 2;
+      font-size: $element-font-large;
     }
 
     &.inline {

@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.4.4
+  CreSS v0.5.0
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -365,6 +365,7 @@ body {
 
 main {
   min-height: 100%;
+  min-width: 20rem;
   position: relative;
   z-index: 1;
   padding: 0;
@@ -954,7 +955,7 @@ a {
   color: #ee6969;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #de6664; }
+    color: #eb5252; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em;
@@ -1078,7 +1079,7 @@ video {
     background-color: #ededeb;
     color: #41485e; }
   .box.white {
-    background-color: #fff;
+    background-color: white;
     color: #41485e; }
 
 [draggable] {
@@ -1129,7 +1130,7 @@ tabs {
       color: #ededeb;
       background: #41485e; }
       tabs > nav > tab:hover {
-        background-color: #314559; }
+        background-color: #373d4f; }
       tabs > nav > tab.active, tabs > nav > tab[active='true'] {
         background: #ee6969; }
       tabs > nav > tab > span {
@@ -1197,7 +1198,7 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   width: auto;
   height: 2.5rem;
   line-height: 2.5rem;
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
   outline: none;
   border: 0;
@@ -1227,7 +1228,7 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   dropdown.disabled, dropdown[disabled], select.disabled, select[disabled], textarea.disabled, textarea[disabled], input[type="text"].disabled, input[type="text"][disabled], input[type="search"].disabled, input[type="search"][disabled], input[type="url"].disabled, input[type="url"][disabled], input[type="email"].disabled, input[type="email"][disabled], input[type="password"].disabled, input[type="password"][disabled], input[type="tel"].disabled, input[type="tel"][disabled], input[type="number"].disabled, input[type="number"][disabled], input[type="date"].disabled, input[type="date"][disabled], input[type="datetime-local"].disabled, input[type="datetime-local"][disabled], input[type="month"].disabled, input[type="month"][disabled], input[type="week"].disabled, input[type="week"][disabled], input[type="time"].disabled, input[type="time"][disabled], input[type="color"].disabled, input[type="color"][disabled] {
     -webkit-font-smoothing: antialiased;
     color: white;
-    background: #de6664; }
+    background: #e93b3b; }
     dropdown.disabled:-ms-input-placeholder, dropdown[disabled]:-ms-input-placeholder, select.disabled:-ms-input-placeholder, select[disabled]:-ms-input-placeholder, textarea.disabled:-ms-input-placeholder, textarea[disabled]:-ms-input-placeholder, input[type="text"].disabled:-ms-input-placeholder, input[type="text"][disabled]:-ms-input-placeholder, input[type="search"].disabled:-ms-input-placeholder, input[type="search"][disabled]:-ms-input-placeholder, input[type="url"].disabled:-ms-input-placeholder, input[type="url"][disabled]:-ms-input-placeholder, input[type="email"].disabled:-ms-input-placeholder, input[type="email"][disabled]:-ms-input-placeholder, input[type="password"].disabled:-ms-input-placeholder, input[type="password"][disabled]:-ms-input-placeholder, input[type="tel"].disabled:-ms-input-placeholder, input[type="tel"][disabled]:-ms-input-placeholder, input[type="number"].disabled:-ms-input-placeholder, input[type="number"][disabled]:-ms-input-placeholder, input[type="date"].disabled:-ms-input-placeholder, input[type="date"][disabled]:-ms-input-placeholder, input[type="datetime-local"].disabled:-ms-input-placeholder, input[type="datetime-local"][disabled]:-ms-input-placeholder, input[type="month"].disabled:-ms-input-placeholder, input[type="month"][disabled]:-ms-input-placeholder, input[type="week"].disabled:-ms-input-placeholder, input[type="week"][disabled]:-ms-input-placeholder, input[type="time"].disabled:-ms-input-placeholder, input[type="time"][disabled]:-ms-input-placeholder, input[type="color"].disabled:-ms-input-placeholder, input[type="color"][disabled]:-ms-input-placeholder {
       color: white;
       font-style: normal; }
@@ -1243,11 +1244,11 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   dropdown.large, select.large, textarea.large, input[type="text"].large, input[type="search"].large, input[type="url"].large, input[type="email"].large, input[type="password"].large, input[type="tel"].large, input[type="number"].large, input[type="date"].large, input[type="datetime-local"].large, input[type="month"].large, input[type="week"].large, input[type="time"].large, input[type="color"].large {
     height: 3.75rem;
     line-height: 1.75rem;
-    font-size: 19.2px; }
+    font-size: 1.75rem; }
   dropdown.small, select.small, textarea.small, input[type="text"].small, input[type="search"].small, input[type="url"].small, input[type="email"].small, input[type="password"].small, input[type="tel"].small, input[type="number"].small, input[type="date"].small, input[type="datetime-local"].small, input[type="month"].small, input[type="week"].small, input[type="time"].small, input[type="color"].small {
     height: 1.875rem;
     line-height: -0.125rem;
-    font-size: 12.8px; }
+    font-size: 0.8rem; }
   dropdown:hover, select:hover, textarea:hover, input[type="text"]:hover, input[type="search"]:hover, input[type="url"]:hover, input[type="email"]:hover, input[type="password"]:hover, input[type="tel"]:hover, input[type="number"]:hover, input[type="date"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="week"]:hover, input[type="time"]:hover, input[type="color"]:hover {
     -webkit-box-shadow: 0 0 2px rgba(65, 72, 94, 0.5);
     box-shadow: 0 0 2px rgba(65, 72, 94, 0.5); }
@@ -1274,10 +1275,10 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     text-align: left; }
     .input label.small {
       line-height: -0.125rem;
-      font-size: 12.8px; }
+      font-size: 0.8rem; }
     .input label.large {
       line-height: 1.75rem;
-      font-size: 19.2px; }
+      font-size: 1.75rem; }
     .input label.inline {
       display: inline-block;
       vertical-align: bottom;
@@ -1305,17 +1306,17 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   resize: vertical;
   overflow: auto; }
   .input textarea.small, textarea.small {
-    min-height: -14.375rem;
-    padding-top: -9.0625rem;
-    padding-bottom: -9.0625rem; }
+    min-height: 4.375rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem; }
   .input textarea, .input textarea.medium, textarea, textarea.medium {
-    min-height: -13.75rem;
-    padding-top: -8.75rem;
-    padding-bottom: -8.75rem; }
+    min-height: 5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem; }
   .input textarea.large, textarea.large {
-    min-height: -12.5rem;
-    padding-top: -8.125rem;
-    padding-bottom: -8.125rem; }
+    min-height: 6.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem; }
   .input textarea.disabled, .input textarea[disabled], textarea.disabled, textarea[disabled] {
     resize: none;
     overflow: auto; }
@@ -1437,16 +1438,16 @@ dropdown {
       .no-touch dropdown > .option-wrap > li.selected, .no-touch dropdown > .option-wrap > li[selected] {
         background: black; }
       .no-touch dropdown > .option-wrap > li.option:focus, .no-touch dropdown > .option-wrap > li.option:hover {
-        background: #314559; }
+        background: #373d4f; }
       .no-touch dropdown > .option-wrap > li.optgroup {
         cursor: default;
         font-style: italic;
-        color: #e7e7e8;
+        color: #ccc;
         background-color: #4b546d; }
       .no-touch dropdown > .option-wrap > li[label] {
         font-style: italic; }
   .no-touch dropdown.open, .no-touch dropdown[open], .no-touch dropdown:hover {
-    background: #F0F0F2;
+    background: #f9f9f8;
     border-color: #a6a6a6; }
     .no-touch dropdown.open > trigger, .no-touch dropdown[open] > trigger, .no-touch dropdown:hover > trigger {
       background: #ccc; }
@@ -1579,40 +1580,40 @@ input[type="color"] {
   input[type="color"].large, .input input[type="color"].large {
     width: 3.75rem; }
 
-.form-group {
+.button-group, .form-group {
   margin-bottom: 0;
   font-size: 0;
   vertical-align: top; }
-  .form-group:before, .form-group:after {
+  .button-group:before, .button-group:after, .form-group:before, .form-group:after {
     content: " ";
     display: table; }
-  .form-group:after {
+  .button-group:after, .form-group:after {
     clear: both; }
-  .form-group > button, .form-group > .button, .form-group > dropdown, .form-group > select, .form-group > textarea, .form-group > input[type="text"], .form-group > input[type="search"], .form-group > input[type="url"], .form-group > input[type="email"], .form-group > input[type="password"], .form-group > input[type="tel"], .form-group > input[type="number"], .form-group > input[type="date"], .form-group > input[type="datetime-local"], .form-group > input[type="month"], .form-group > input[type="week"], .form-group > input[type="time"], .form-group > input[type="color"], .form-group > .form-group {
+  .button-group > button, .button-group > .button, .button-group > dropdown, .button-group > select, .button-group > textarea, .button-group > input[type="text"], .button-group > input[type="search"], .button-group > input[type="url"], .button-group > input[type="email"], .button-group > input[type="password"], .button-group > input[type="tel"], .button-group > input[type="number"], .button-group > input[type="date"], .button-group > input[type="datetime-local"], .button-group > input[type="month"], .button-group > input[type="week"], .button-group > input[type="time"], .button-group > input[type="color"], .button-group > .button-group, .button-group > .form-group, .form-group > button, .form-group > .button, .form-group > dropdown, .form-group > select, .form-group > textarea, .form-group > input[type="text"], .form-group > input[type="search"], .form-group > input[type="url"], .form-group > input[type="email"], .form-group > input[type="password"], .form-group > input[type="tel"], .form-group > input[type="number"], .form-group > input[type="date"], .form-group > input[type="datetime-local"], .form-group > input[type="month"], .form-group > input[type="week"], .form-group > input[type="time"], .form-group > input[type="color"], .form-group > .button-group, .form-group > .form-group {
     display: inline-block;
     vertical-align: top;
     margin-left: 0.625rem;
     margin-right: 0.625rem;
     margin-bottom: 1.25rem; }
-    .form-group > button span, .form-group > .button span, .form-group > dropdown span, .form-group > select span, .form-group > textarea span, .form-group > input[type="text"] span, .form-group > input[type="search"] span, .form-group > input[type="url"] span, .form-group > input[type="email"] span, .form-group > input[type="password"] span, .form-group > input[type="tel"] span, .form-group > input[type="number"] span, .form-group > input[type="date"] span, .form-group > input[type="datetime-local"] span, .form-group > input[type="month"] span, .form-group > input[type="week"] span, .form-group > input[type="time"] span, .form-group > input[type="color"] span, .form-group > .form-group span {
+    .button-group > button span, .button-group > .button span, .button-group > dropdown span, .button-group > select span, .button-group > textarea span, .button-group > input[type="text"] span, .button-group > input[type="search"] span, .button-group > input[type="url"] span, .button-group > input[type="email"] span, .button-group > input[type="password"] span, .button-group > input[type="tel"] span, .button-group > input[type="number"] span, .button-group > input[type="date"] span, .button-group > input[type="datetime-local"] span, .button-group > input[type="month"] span, .button-group > input[type="week"] span, .button-group > input[type="time"] span, .button-group > input[type="color"] span, .button-group > .button-group span, .button-group > .form-group span, .form-group > button span, .form-group > .button span, .form-group > dropdown span, .form-group > select span, .form-group > textarea span, .form-group > input[type="text"] span, .form-group > input[type="search"] span, .form-group > input[type="url"] span, .form-group > input[type="email"] span, .form-group > input[type="password"] span, .form-group > input[type="tel"] span, .form-group > input[type="number"] span, .form-group > input[type="date"] span, .form-group > input[type="datetime-local"] span, .form-group > input[type="month"] span, .form-group > input[type="week"] span, .form-group > input[type="time"] span, .form-group > input[type="color"] span, .form-group > .button-group span, .form-group > .form-group span {
       font-size: 14px; }
-    .form-group > button:first-child, .form-group > .button:first-child, .form-group > dropdown:first-child, .form-group > select:first-child, .form-group > textarea:first-child, .form-group > input[type="text"]:first-child, .form-group > input[type="search"]:first-child, .form-group > input[type="url"]:first-child, .form-group > input[type="email"]:first-child, .form-group > input[type="password"]:first-child, .form-group > input[type="tel"]:first-child, .form-group > input[type="number"]:first-child, .form-group > input[type="date"]:first-child, .form-group > input[type="datetime-local"]:first-child, .form-group > input[type="month"]:first-child, .form-group > input[type="week"]:first-child, .form-group > input[type="time"]:first-child, .form-group > input[type="color"]:first-child, .form-group > .form-group:first-child {
+    .button-group > button:first-child, .button-group > .button:first-child, .button-group > dropdown:first-child, .button-group > select:first-child, .button-group > textarea:first-child, .button-group > input[type="text"]:first-child, .button-group > input[type="search"]:first-child, .button-group > input[type="url"]:first-child, .button-group > input[type="email"]:first-child, .button-group > input[type="password"]:first-child, .button-group > input[type="tel"]:first-child, .button-group > input[type="number"]:first-child, .button-group > input[type="date"]:first-child, .button-group > input[type="datetime-local"]:first-child, .button-group > input[type="month"]:first-child, .button-group > input[type="week"]:first-child, .button-group > input[type="time"]:first-child, .button-group > input[type="color"]:first-child, .button-group > .button-group:first-child, .button-group > .form-group:first-child, .form-group > button:first-child, .form-group > .button:first-child, .form-group > dropdown:first-child, .form-group > select:first-child, .form-group > textarea:first-child, .form-group > input[type="text"]:first-child, .form-group > input[type="search"]:first-child, .form-group > input[type="url"]:first-child, .form-group > input[type="email"]:first-child, .form-group > input[type="password"]:first-child, .form-group > input[type="tel"]:first-child, .form-group > input[type="number"]:first-child, .form-group > input[type="date"]:first-child, .form-group > input[type="datetime-local"]:first-child, .form-group > input[type="month"]:first-child, .form-group > input[type="week"]:first-child, .form-group > input[type="time"]:first-child, .form-group > input[type="color"]:first-child, .form-group > .button-group:first-child, .form-group > .form-group:first-child {
       margin-left: 0; }
-    .form-group > button:last-child, .form-group > .button:last-child, .form-group > dropdown:last-child, .form-group > select:last-child, .form-group > textarea:last-child, .form-group > input[type="text"]:last-child, .form-group > input[type="search"]:last-child, .form-group > input[type="url"]:last-child, .form-group > input[type="email"]:last-child, .form-group > input[type="password"]:last-child, .form-group > input[type="tel"]:last-child, .form-group > input[type="number"]:last-child, .form-group > input[type="date"]:last-child, .form-group > input[type="datetime-local"]:last-child, .form-group > input[type="month"]:last-child, .form-group > input[type="week"]:last-child, .form-group > input[type="time"]:last-child, .form-group > input[type="color"]:last-child, .form-group > .form-group:last-child {
+    .button-group > button:last-child, .button-group > .button:last-child, .button-group > dropdown:last-child, .button-group > select:last-child, .button-group > textarea:last-child, .button-group > input[type="text"]:last-child, .button-group > input[type="search"]:last-child, .button-group > input[type="url"]:last-child, .button-group > input[type="email"]:last-child, .button-group > input[type="password"]:last-child, .button-group > input[type="tel"]:last-child, .button-group > input[type="number"]:last-child, .button-group > input[type="date"]:last-child, .button-group > input[type="datetime-local"]:last-child, .button-group > input[type="month"]:last-child, .button-group > input[type="week"]:last-child, .button-group > input[type="time"]:last-child, .button-group > input[type="color"]:last-child, .button-group > .button-group:last-child, .button-group > .form-group:last-child, .form-group > button:last-child, .form-group > .button:last-child, .form-group > dropdown:last-child, .form-group > select:last-child, .form-group > textarea:last-child, .form-group > input[type="text"]:last-child, .form-group > input[type="search"]:last-child, .form-group > input[type="url"]:last-child, .form-group > input[type="email"]:last-child, .form-group > input[type="password"]:last-child, .form-group > input[type="tel"]:last-child, .form-group > input[type="number"]:last-child, .form-group > input[type="date"]:last-child, .form-group > input[type="datetime-local"]:last-child, .form-group > input[type="month"]:last-child, .form-group > input[type="week"]:last-child, .form-group > input[type="time"]:last-child, .form-group > input[type="color"]:last-child, .form-group > .button-group:last-child, .form-group > .form-group:last-child {
       margin-right: 0; }
-  .form-group.combine > button, .form-group.combine > .button, .form-group.combine > dropdown, .form-group.combine > select, .form-group.combine > textarea, .form-group.combine > input[type="text"], .form-group.combine > input[type="search"], .form-group.combine > input[type="url"], .form-group.combine > input[type="email"], .form-group.combine > input[type="password"], .form-group.combine > input[type="tel"], .form-group.combine > input[type="number"], .form-group.combine > input[type="date"], .form-group.combine > input[type="datetime-local"], .form-group.combine > input[type="month"], .form-group.combine > input[type="week"], .form-group.combine > input[type="time"], .form-group.combine > input[type="color"], .form-group.combine > .form-group {
+  .button-group.combine > button, .button-group.combine > .button, .button-group.combine > dropdown, .button-group.combine > select, .button-group.combine > textarea, .button-group.combine > input[type="text"], .button-group.combine > input[type="search"], .button-group.combine > input[type="url"], .button-group.combine > input[type="email"], .button-group.combine > input[type="password"], .button-group.combine > input[type="tel"], .button-group.combine > input[type="number"], .button-group.combine > input[type="date"], .button-group.combine > input[type="datetime-local"], .button-group.combine > input[type="month"], .button-group.combine > input[type="week"], .button-group.combine > input[type="time"], .button-group.combine > input[type="color"], .button-group.combine > .button-group, .button-group.combine > .form-group, .form-group.combine > button, .form-group.combine > .button, .form-group.combine > dropdown, .form-group.combine > select, .form-group.combine > textarea, .form-group.combine > input[type="text"], .form-group.combine > input[type="search"], .form-group.combine > input[type="url"], .form-group.combine > input[type="email"], .form-group.combine > input[type="password"], .form-group.combine > input[type="tel"], .form-group.combine > input[type="number"], .form-group.combine > input[type="date"], .form-group.combine > input[type="datetime-local"], .form-group.combine > input[type="month"], .form-group.combine > input[type="week"], .form-group.combine > input[type="time"], .form-group.combine > input[type="color"], .form-group.combine > .button-group, .form-group.combine > .form-group {
     margin-left: 0;
     margin-right: 0;
     border-radius: 0; }
-    .form-group.combine > button:first-child, .form-group.combine > .button:first-child, .form-group.combine > dropdown:first-child, .form-group.combine > select:first-child, .form-group.combine > textarea:first-child, .form-group.combine > input[type="text"]:first-child, .form-group.combine > input[type="search"]:first-child, .form-group.combine > input[type="url"]:first-child, .form-group.combine > input[type="email"]:first-child, .form-group.combine > input[type="password"]:first-child, .form-group.combine > input[type="tel"]:first-child, .form-group.combine > input[type="number"]:first-child, .form-group.combine > input[type="date"]:first-child, .form-group.combine > input[type="datetime-local"]:first-child, .form-group.combine > input[type="month"]:first-child, .form-group.combine > input[type="week"]:first-child, .form-group.combine > input[type="time"]:first-child, .form-group.combine > input[type="color"]:first-child, .form-group.combine > .form-group:first-child {
+    .button-group.combine > button:first-child, .button-group.combine > .button:first-child, .button-group.combine > dropdown:first-child, .button-group.combine > select:first-child, .button-group.combine > textarea:first-child, .button-group.combine > input[type="text"]:first-child, .button-group.combine > input[type="search"]:first-child, .button-group.combine > input[type="url"]:first-child, .button-group.combine > input[type="email"]:first-child, .button-group.combine > input[type="password"]:first-child, .button-group.combine > input[type="tel"]:first-child, .button-group.combine > input[type="number"]:first-child, .button-group.combine > input[type="date"]:first-child, .button-group.combine > input[type="datetime-local"]:first-child, .button-group.combine > input[type="month"]:first-child, .button-group.combine > input[type="week"]:first-child, .button-group.combine > input[type="time"]:first-child, .button-group.combine > input[type="color"]:first-child, .button-group.combine > .button-group:first-child, .button-group.combine > .form-group:first-child, .form-group.combine > button:first-child, .form-group.combine > .button:first-child, .form-group.combine > dropdown:first-child, .form-group.combine > select:first-child, .form-group.combine > textarea:first-child, .form-group.combine > input[type="text"]:first-child, .form-group.combine > input[type="search"]:first-child, .form-group.combine > input[type="url"]:first-child, .form-group.combine > input[type="email"]:first-child, .form-group.combine > input[type="password"]:first-child, .form-group.combine > input[type="tel"]:first-child, .form-group.combine > input[type="number"]:first-child, .form-group.combine > input[type="date"]:first-child, .form-group.combine > input[type="datetime-local"]:first-child, .form-group.combine > input[type="month"]:first-child, .form-group.combine > input[type="week"]:first-child, .form-group.combine > input[type="time"]:first-child, .form-group.combine > input[type="color"]:first-child, .form-group.combine > .button-group:first-child, .form-group.combine > .form-group:first-child {
       border-left-width: 1px;
       border-top-left-radius: 0.25rem;
       border-bottom-left-radius: 0.25rem; }
-    .form-group.combine > button:last-child, .form-group.combine > .button:last-child, .form-group.combine > dropdown:last-child, .form-group.combine > select:last-child, .form-group.combine > textarea:last-child, .form-group.combine > input[type="text"]:last-child, .form-group.combine > input[type="search"]:last-child, .form-group.combine > input[type="url"]:last-child, .form-group.combine > input[type="email"]:last-child, .form-group.combine > input[type="password"]:last-child, .form-group.combine > input[type="tel"]:last-child, .form-group.combine > input[type="number"]:last-child, .form-group.combine > input[type="date"]:last-child, .form-group.combine > input[type="datetime-local"]:last-child, .form-group.combine > input[type="month"]:last-child, .form-group.combine > input[type="week"]:last-child, .form-group.combine > input[type="time"]:last-child, .form-group.combine > input[type="color"]:last-child, .form-group.combine > .form-group:last-child {
+    .button-group.combine > button:last-child, .button-group.combine > .button:last-child, .button-group.combine > dropdown:last-child, .button-group.combine > select:last-child, .button-group.combine > textarea:last-child, .button-group.combine > input[type="text"]:last-child, .button-group.combine > input[type="search"]:last-child, .button-group.combine > input[type="url"]:last-child, .button-group.combine > input[type="email"]:last-child, .button-group.combine > input[type="password"]:last-child, .button-group.combine > input[type="tel"]:last-child, .button-group.combine > input[type="number"]:last-child, .button-group.combine > input[type="date"]:last-child, .button-group.combine > input[type="datetime-local"]:last-child, .button-group.combine > input[type="month"]:last-child, .button-group.combine > input[type="week"]:last-child, .button-group.combine > input[type="time"]:last-child, .button-group.combine > input[type="color"]:last-child, .button-group.combine > .button-group:last-child, .button-group.combine > .form-group:last-child, .form-group.combine > button:last-child, .form-group.combine > .button:last-child, .form-group.combine > dropdown:last-child, .form-group.combine > select:last-child, .form-group.combine > textarea:last-child, .form-group.combine > input[type="text"]:last-child, .form-group.combine > input[type="search"]:last-child, .form-group.combine > input[type="url"]:last-child, .form-group.combine > input[type="email"]:last-child, .form-group.combine > input[type="password"]:last-child, .form-group.combine > input[type="tel"]:last-child, .form-group.combine > input[type="number"]:last-child, .form-group.combine > input[type="date"]:last-child, .form-group.combine > input[type="datetime-local"]:last-child, .form-group.combine > input[type="month"]:last-child, .form-group.combine > input[type="week"]:last-child, .form-group.combine > input[type="time"]:last-child, .form-group.combine > input[type="color"]:last-child, .form-group.combine > .button-group:last-child, .form-group.combine > .form-group:last-child {
       border-right-width: 1px;
       border-top-right-radius: 0.25rem;
       border-bottom-right-radius: 0.25rem; }
-  .form-group .form-group {
+  .button-group .button-group, .button-group .form-group, .form-group .button-group, .form-group .form-group {
     margin-bottom: 0; }
 
 .button, button {
@@ -1632,17 +1633,17 @@ input[type="color"] {
     padding: 0 0.625rem;
     height: 1.875rem;
     line-height: 1.875rem;
-    font-size: 12.8px; }
+    font-size: 0.8rem; }
   .button, .button.medium, button, button.medium {
     padding: 0 1.25rem;
     height: 2.5rem;
     line-height: 2.5rem;
-    font-size: 16px; }
+    font-size: 1rem; }
   .button.large, button.large {
     padding: 0 1.875rem;
     height: 3.75rem;
     line-height: 3.75rem;
-    font-size: 19.2px; }
+    font-size: 1.75rem; }
   .button span, button span {
     display: inline-block; }
   .button.fill, button.fill {
@@ -1665,7 +1666,7 @@ input[type="color"] {
   -webkit-font-smoothing: antialiased; }
   .button:hover, button:hover {
     color: white;
-    background: #de6664; }
+    background: #e93b3b; }
   .button.dark, .button.secondary, button.dark, button.secondary {
     color: white;
     background: rgba(65, 72, 94, 0.9);
@@ -1673,21 +1674,21 @@ input[type="color"] {
     -webkit-font-smoothing: antialiased; }
     .button.dark:hover, .button.secondary:hover, button.dark:hover, button.secondary:hover {
       color: white;
-      background: #314559; }
+      background: #373d4f; }
   .button.light, button.light {
     color: #41485e;
     background: #ededeb;
     border-color: rgba(65, 72, 94, 0.1); }
     .button.light:hover, button.light:hover {
       color: #41485e;
-      background: #F0F0F2; }
+      background: #f9f9f8; }
   .button.white, button.white {
     color: #41485e;
     background: white;
     border-color: rgba(65, 72, 94, 0.1); }
     .button.white:hover, button.white:hover {
       color: #41485e;
-      background: #F0F0F2; }
+      background: #f9f9f8; }
 
 
 nav.top {
@@ -1739,7 +1740,7 @@ nav.top {
             padding: 0.625rem 1.25rem;
             background: #41485e; }
             nav.top > ul li > ul > li > a:hover {
-              background-color: #314559; }
+              background-color: #373d4f; }
       nav.top > ul li:hover > ul {
         -webkit-transition: opacity 125ms;
         transition: opacity 125ms;
@@ -1839,7 +1840,7 @@ section {
     background-color: #ededeb;
     color: #41485e; }
   section.white {
-    background-color: #fff;
+    background-color: white;
     color: #41485e; }
 
 footer {

@@ -24,7 +24,7 @@ dropdown {
     display: block;
     pointer-events: none;
 
-    width: $size-medium;
+    width: $element-medium;
     position: absolute;
     top: 0;
     right: 0;
@@ -33,7 +33,7 @@ dropdown {
     background: $color-light;
 
     &:after {
-      @include triangle('down', $color-secondary, $size-medium/4);
+      @include triangle('down', $color-secondary, $element-medium/4);
       content: '';
 
       margin: auto auto auto 0;
@@ -46,9 +46,9 @@ dropdown {
       display: block;
 
       margin: auto;
-      width: rem-calc($size-medium/2);
-      height: rem-calc($size-medium/2);
-      line-height: rem-calc($size-medium/2 + 3);
+      width: rem-calc($element-medium/2);
+      height: rem-calc($element-medium/2);
+      line-height: rem-calc($element-medium/2 + 3);
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
 
@@ -60,7 +60,7 @@ dropdown {
   >.label {
     display: none;
     cursor: pointer;
-    padding: 0 ($size-medium + $spacing) 0 $spacing;
+    padding: 0 ($element-medium + $spacing) 0 $spacing;
 
     font-weight: bold;
     text-align: left;
@@ -145,13 +145,13 @@ dropdown {
 
         &.option:focus,
         &.option:hover {
-          background: $color-secondary-darker;
+          background: darken($color-secondary,5%);
         }
 
         &.optgroup {
           cursor: default;
           font-style: italic;
-          color: $color-gray-lighter;
+          color: $color-gray-light;
           background-color: lighten($color-secondary,5%);
         }
 
@@ -161,7 +161,7 @@ dropdown {
 
     &.open, &[open],
     &:hover {
-      background: $color-lighter;
+      background: lighten($color-light,5%);
       border-color: darken($color-gray-light,15%);
 
       >trigger { background: $color-gray-light; }

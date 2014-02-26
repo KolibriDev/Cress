@@ -16,28 +16,29 @@ input[type="time"] {
 
 .input textarea,
 textarea {
-  line-height: rem-calc(20);
+  $textarea-line-height: rem-calc(20);
+  line-height: $textarea-line-height;
 
   @include resizable(vertical);
 
   &.small {
-    $padding: $size-small - 20;
-    min-height: (rem-calc(20) * 3) + $padding;
+    $padding: $element-small - $textarea-line-height;
+    min-height: ($textarea-line-height * 3) + $padding;
     padding-top: $padding/2;
     padding-bottom: $padding/2;
   }
 
   &,
   &.medium {
-    $padding: $size-medium - 20;
-    min-height: (rem-calc(20) * 3) + $padding;
+    $padding: $element-medium - $textarea-line-height;
+    min-height: ($textarea-line-height * 3) + $padding;
     padding-top: $padding/2;
     padding-bottom: $padding/2;
   }
 
   &.large {
-    $padding: $size-large - 20;
-    min-height: (rem-calc(20) * 3) + $padding;
+    $padding: $element-large - $textarea-line-height;
+    min-height: ($textarea-line-height * 3) + $padding;
     padding-top: $padding/2;
     padding-bottom: $padding/2;
   }

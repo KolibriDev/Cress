@@ -16,13 +16,13 @@ tabs {
       display: inline-block;
       padding: 0 $spacing;
 
-      line-height: rem-calc($size-medium);
+      line-height: rem-calc($element-medium);
       font-size: $font-size;
       color: $color-light;
 
       background: $color-secondary;
 
-      &:hover { background-color: $color-secondary-darker; }
+      &:hover { background-color: darken($color-secondary,5%); }
 
       &.active,
       &[active='true'] { background: $color-primary; }

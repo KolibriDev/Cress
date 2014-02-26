@@ -1,8 +1,8 @@
 
 checkbox {
-  $checkbox-small: $size-small * 0.6;
-  $checkbox-medium: $size-medium * 0.6;
-  $checkbox-large: $size-large * 0.6;
+  $checkbox-small: $element-small * 0.6;
+  $checkbox-medium: $element-medium * 0.6;
+  $checkbox-large: $element-large * 0.6;
 
   transition: background, color;
   transition-duration: $transition-speed-fast;
@@ -80,9 +80,9 @@ checkbox:before {
 
 
 radio {
-  $radio-small: $size-small * 0.6;
-  $radio-medium: $size-medium * 0.6;
-  $radio-large: $size-large * 0.6;
+  $radio-small: $element-small * 0.6;
+  $radio-medium: $element-medium * 0.6;
+  $radio-large: $element-large * 0.6;
 
   transition: background, color;
   transition-duration: $transition-speed-fast;

@@ -1,11 +1,11 @@
 row, column { display: block; }
 
 .row, row {
-  @function grid-calc($colNumber, $totalColumns: $grid-count) {
+  @function grid-calc($colNumber, $totalColumns: $grid-columns) {
     @return percentage($colNumber / $totalColumns);
   }
   @mixin grid-columns($className: 'span') {
-    @for $col from 1 through $grid-count {
+    @for $col from 1 through $grid-columns {
       &.#{$className}-#{$col} { width: grid-calc($col); }
     }
   }
@@ -21,7 +21,7 @@ row, column { display: block; }
     @if($className != '') {
       $className: "#{$className}-";
     }
-    @for $col from 1 through $grid-count {
+    @for $col from 1 through $grid-columns {
       &.#{$className}offset-#{$col} { margin-left: grid-calc($col); }
     }
   }
@@ -30,7 +30,7 @@ row, column { display: block; }
       $className: "#{$className}-";
     }
 
-    @for $col from 1 through $grid-count {
+    @for $col from 1 through $grid-columns {
       &.#{$className}push-#{$col} { left: grid-calc($col); }
       &.#{$className}pull-#{$col} { right: grid-calc($col); }
     }

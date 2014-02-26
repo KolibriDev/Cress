@@ -9,7 +9,7 @@
 
   &:hover {
     color: white;
-    background: $color-primary-darker;
+    background: darken($color-primary,10%);
   }
 
   &.dark,
@@ -23,7 +23,7 @@
 
     &:hover {
       color: white;
-      background: $color-secondary-darker;
+      background: darken($color-secondary,5%);
     }
   }
 
@@ -35,7 +35,7 @@
 
     &:hover {
       color: $color-secondary;
-      background: $color-lighter;
+      background: lighten($color-light,5%);
     }
   }
 
@@ -47,7 +47,7 @@
 
     &:hover {
       color: $color-secondary;
-      background: $color-lighter;
+      background: lighten($color-light,5%);
     }
   }
 }

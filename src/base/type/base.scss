@@ -12,7 +12,7 @@ a {
 
   &:hover,
   &:focus {
-    color: $color-primary-darker;
+    color: darken($color-primary,5%);
   }
 }
 

@@ -5,10 +5,6 @@ $font-size: 16px;
 $font-color: #333;
 $line-height: 1.25;
 
-$font-size-small: $font-size * .8;
-$font-size-medium: $font-size;
-$font-size-large: $font-size * 1.2;
-
 $heading-font-family: $font-family-alt;
 $heading-font-weight: bold;
 $heading-text-transform: none;
@@ -18,45 +14,48 @@ $heading-line-height: $line-height;
 $spacing: rem-calc(20);
 $page-max-width: rem-calc(1200);
 $page-min-width: rem-calc(320);
+
+// Grid
+$grid-columns: 12;
+$grid-gutter: $spacing;
+
+// Radius
 $radius: rem-calc(4);
 $box-radius: $radius;
 $form-radius: $radius;
 $button-radius: $form-radius;
 
-$size-small: rem-calc(30);
-$size-medium: rem-calc(40);
-$size-large: rem-calc(60);
+// Used for forms, buttons etc.
+$element-small: rem-calc(30);
+$element-medium: rem-calc(40);
+$element-large: rem-calc(60);
+
+$element-font-small: rem-calc($font-size * 0.8);
+$element-font-medium: rem-calc($font-size);
+$element-font-large: rem-calc($font-size * 1.75);
 
 // Grayscale
-$color-black: #000;
-$color-gray-darker: #231f20;
 $color-gray-dark: #555;
 $color-gray: #999999;
 $color-gray-light: #ccc;
-$color-gray-lighter: #e7e7e8;
-$color-white: #fff;
 
 // Colors
 $color-red: #ee6969;
-$color-red-darker: $color-red - #100305;
 $color-light: #ededeb;
-$color-lighter: #F0F0F2;
-$color-blue-dark: #41485e;
-$color-blue-darker: $color-blue-dark - #100305;
+$color-blue: #41485e;
 
 $color-primary: $color-red;
-$color-primary-darker: $color-red-darker;
-$color-secondary: $color-blue-dark;
-$color-secondary-darker: $color-blue-darker;
+$color-secondary: $color-blue;
 
-$color-border: $color-primary;
+$color-border: $color-gray;
 
-$body-bg: $color-light;
+// Applied to html and body
+$body-background: $color-light;
 
 // Text direction & floats
-$text-direction: ltr !default;
-$default-float: left !default;
-$opposite-float: right !default;
+$text-direction: ltr;
+$default-float: left;
+$opposite-float: right;
 @if $text-direction == ltr {
   $default-float: left;
   $opposite-float: right;
@@ -65,22 +64,17 @@ $opposite-float: right !default;
   $opposite-float: left;
 }
 
-// Transitions
+// Transitions duration
 $transition-speed-fast: 125ms;
 $transition-speed: 250ms;
 $transition-speed-slow: 350ms;
 
-// Grid
-$grid-count: 12;
-$grid-gutter: $spacing;
-
+// Media Queries
 $small-range: (0, rem-calc(640)); /* 0 - 640px */
 $medium-range: (rem-calc(641), rem-calc(1024)); /* 641px, 1024px */
 $large-range: (rem-calc(1025)); /* 1025px+ */
 
-// Media Queries
 $screen: "only screen";
-
 $landscape: "#{$screen} and (orientation: landscape)";
 $portrait: "#{$screen} and (orientation: portrait)";
 
@@ -91,7 +85,6 @@ $retina:
   (min-device-pixel-ratio: 1.5),
   (min-resolution: 144dpi),
   (min-resolution: 1.5dppx)";
-
 
 $small-up: $screen;
 $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";

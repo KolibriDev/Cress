@@ -6,8 +6,8 @@ icon, [icon] {
 icon, [icon] {
   &.circle {
     display: inline-block;
-    width: $size-small;
-    height: $size-small;
+    width: $element-small;
+    height: $element-small;
     position: relative;
 
     font-size: rem-calc($font-size);
@@ -22,8 +22,8 @@ icon, [icon] {
     &:before {
       display: block;
       margin: 0 auto;
-      width: $size-small;
-      height: $size-small;
+      width: $element-small;
+      height: $element-small;
     }
     &.primary {
       background: $color-primary;

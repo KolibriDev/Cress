@@ -10,7 +10,7 @@ html {
   font-size: $font-size;
   color: $font-color;
 
-  background: $body-bg;
+  background: $body-background;
 
   direction: $text-direction;
 }
@@ -22,11 +22,12 @@ body {
 
 main {
   min-height: 100%;
+  min-width: $page-min-width;
   position: relative;
   z-index: 1;
   padding: 0;
 
-  background: $body-bg;
+  background: $body-background;
 }
 
 // Default box-sizing to border-box, except for images and hr

@@ -19,24 +19,24 @@
 
   &.small {
     padding: 0 $spacing/2;
-    height: $size-small;
-    line-height: $size-small;
-    font-size: $font-size-small;
+    height: $element-small;
+    line-height: $element-small;
+    font-size: $element-font-small;
   }
 
   &, // (default)
   &.medium {
     padding: 0 $spacing;
-    height: $size-medium;
-    line-height: $size-medium;
-    font-size: $font-size-medium;
+    height: $element-medium;
+    line-height: $element-medium;
+    font-size: $element-font-medium;
   }
 
   &.large {
     padding: 0 $spacing*1.5;
-    height: $size-large;
-    line-height: $size-large;
-    font-size: $font-size-large;
+    height: $element-large;
+    line-height: $element-large;
+    font-size: $element-font-large;
   }
 
   span { display: inline-block; }
