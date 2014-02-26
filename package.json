@@ -1,7 +1,7 @@
 {
   "name": "CreSS",
   "description": "CreSS is our pretty basic css framework",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "author": {
     "name": "Form5",
     "email": "hello@form5.is",
@@ -15,13 +15,16 @@
     "Olafur Nielsen <olafur@form5.is>"
   ],
   "devDependencies": {
+    "bower": "^1.2.8",
     "gulp": "~3.5.2",
     "gulp-autoprefixer": "0.0.6",
-    "gulp-csso": "~0.2.3",
+    "gulp-bower-files": "^0.1.11",
+    "gulp-csso": "~0.2.6",
+    "gulp-filter": "^0.3.0",
     "gulp-header": "~1.0.2",
     "gulp-minify-css": "~0.3.0",
-    "gulp-rename": "~1.0.0",
-    "gulp-sass": "~0.6.0"
+    "gulp-rename": "^1.1.0",
+    "gulp-sass": "^0.7.1"
   },
   "homepage": "https://github.com/Form5/Cress",
   "keywords": [

@@ -5,6 +5,9 @@ var gulp   = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     header = require('gulp-header'),
+    filter = require('gulp-filter'),
+    bowerFiles = require('gulp-bower-files'),
+    bower  = require('bower'),
     pkg    = require('./package.json'),
     banner = [
       '/*!',
@@ -14,6 +17,21 @@ var gulp   = require('gulp'),
       '  <%= pkg.author.email %>',
       '  License: <%= pkg.license %>',
       '*/','' ].join('\n');
+
+gulp.task('bower', function() {
+
+  return bower.commands.install()
+    .on('end', function() {
+
+      var scssFilter = filter('**/*.scss');
+
+      return bowerFiles()
+        .pipe( rename({dirname: ''}) )
+        .pipe( scssFilter )
+        .pipe( gulp.dest('./src/vendor/') );
+    });
+
+});
 
 gulp.task('build', function() {
   return gulp.src('src/*.scss')
