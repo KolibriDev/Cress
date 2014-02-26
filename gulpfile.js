@@ -25,3 +25,5 @@ gulp.task('build', function() {
     .pipe( rename({suffix: '.min'}) )
     .pipe( gulp.dest('dist/') );
 });
+
+gulp.task('default',['build']);
