@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.4.1
+  CreSS v0.4.2
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -808,7 +808,7 @@ row, column {
         left: 100%; }
       .row .col.medium-pull-12, .row column.medium-pull-12, row .col.medium-pull-12, row column.medium-pull-12 {
         right: 100%; } }
-    @media only screen and (min-width:64.0625rem) and (max-width:999999999999) {
+    @media only screen and (min-width:64.0625rem) {
       .row .col.large-centered, .row column.large-centered, row .col.large-centered, row column.large-centered {
         margin-left: auto;
         margin-right: auto;
@@ -897,69 +897,53 @@ row, column {
       padding-left: 0;
       padding-right: 0; }
 
-.full-show, .large-show, .medium-show, .small-show {
+.large-show, .medium-show, .small-show {
   display: none !important; }
 
-.full-hide, .large-hide, .medium-hide, .small-hide {
+.large-hide, .medium-hide, .small-hide {
   display: block !important; }
 
 @media only screen and (min-width:64.0625rem) {
   .large-show {
     display: block !important; }
-  .full-show, .medium-show, .small-show {
+  .medium-show, .small-show {
     display: none !important; }
   .large-hide {
     display: none !important; }
-  .full-hide, .medium-hide, .small-hide {
+  .medium-hide, .small-hide {
     display: block !important; } }
 
-@media only screen and (min-width:40.0625rem) {
+@media only screen and (min-width:40.0625rem) and (max-width:64rem) {
   .medium-show {
     display: block !important; }
-  .full-show, .large-show, .small-show {
+  .large-show, .small-show {
     display: none !important; }
   .medium-hide {
     display: none !important; }
-  .full-hide, .large-hide, .small-hide {
+  .large-hide, .small-hide {
     display: block !important; } }
 
-@media only screen {
+@media only screen and (max-width: 40rem) {
   .small-show {
     display: block !important; }
-  .full-show, .large-show, .medium-show {
+  .large-show, .medium-show {
     display: none !important; }
   .small-hide {
     display: none !important; }
-  .full-hide, .large-hide, .medium-hide {
+  .large-hide, .medium-hide {
     display: block !important; } }
 
 .medium-up-show {
   display: none !important; }
+  @media only screen and (min-width:40.0625rem) {
+    .medium-up-show {
+      display: block !important; } }
 
 .medium-up-hide {
   display: block !important; }
-
-.large-up-show {
-  display: none !important; }
-
-.large-up-hide {
-  display: block !important; }
-
-.full-up-show {
-  display: none !important; }
-
-.full-up-hide {
-  display: block !important; }
-
-.sub-show {
-  display: none !important; }
-  .sub .sub-show {
-    display: block !important; }
-  .sub .sub-show.inline {
-    display: inline-block !important; }
-
-.sub .sub-hide {
-  display: none !important; }
+  @media only screen and (min-width:40.0625rem) {
+    .medium-up-hide {
+      display: none !important; } }
 
 p {
   margin: 0 0 1.25rem; }

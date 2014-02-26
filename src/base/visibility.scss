@@ -1,86 +1,48 @@
 
-.full-show,
 .large-show,
 .medium-show,
 .small-show { display: none !important; }
 
-.full-hide,
 .large-hide,
 .medium-hide,
 .small-hide { display: block !important; }
 
-@include respond-to(full-up) {
-  .full-show { display: block !important; }
-
-  .large-show,
-  .medium-show,
-  .small-show { display: none !important; }
-
-  .full-hide { display: none !important; }
-
-  .large-hide,
-  .medium-hide,
-  .small-hide { display: block !important; }
-}
-
-@include respond-to(large) {
+@include respond-to(large-only) {
   .large-show { display: block !important; }
 
-  .full-show,
   .medium-show,
   .small-show { display: none !important; }
 
   .large-hide { display: none !important; }
 
-  .full-hide,
   .medium-hide,
   .small-hide { display: block !important; }
 }
 
 
-@include respond-to(medium) {
+@include respond-to(medium-only) {
   .medium-show { display: block !important; }
 
-  .full-show,
   .large-show,
   .small-show { display: none !important; }
 
   .medium-hide { display: none !important; }
 
-  .full-hide,
   .large-hide,
   .small-hide { display: block !important; }
 }
 
-@include respond-to(small) {
+@include respond-to(small-only) {
   .small-show { display: block !important; }
 
-  .full-show,
   .large-show,
   .medium-show { display: none !important; }
 
   .small-hide { display: none !important; }
 
-  .full-hide,
   .large-hide,
   .medium-hide { display: block !important; }
 }
 
-.medium-up-show { display: none !important; @include respond-to(medium-up){ display: block !important; }}
-.medium-up-hide { display: block !important; @include respond-to(medium-up){ display: none !important; }}
-
-.large-up-show { display: none !important; @include respond-to(large-up){ display: block !important; }}
-.large-up-hide { display: block !important; @include respond-to(large-up){ display: none !important; }}
-
-.full-up-show { display: none !important; @include respond-to(full-up){ display: block !important; }}
-.full-up-hide { display: block !important; @include respond-to(full-up){ display: none !important; }}
-
-.sub-show {
-  display: none !important;
-  .sub & { display: block !important; }
-  .sub &.inline { display: inline-block !important; }
-}
-
-.sub-hide {
-  .sub & { display: none !important;}
-}
+.medium-up-show { display: none !important; @include respond-to(medium){ display: block !important; }}
+.medium-up-hide { display: block !important; @include respond-to(medium){ display: none !important; }}
