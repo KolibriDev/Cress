@@ -1,5 +1,7 @@
 
 var gulp   = require('gulp'),
+    gutil  = require('gulp-util'),
+    bump   = require('gulp-bump'),
     sass   = require('gulp-sass'),
     cssmin = require('gulp-minify-css'),
     prefix = require('gulp-autoprefixer'),
@@ -19,7 +21,6 @@ var gulp   = require('gulp'),
       '*/','' ].join('\n');
 
 gulp.task('bower', function() {
-
   return bower.commands.install()
     .on('end', function() {
 
@@ -30,7 +31,15 @@ gulp.task('bower', function() {
         .pipe( scssFilter )
         .pipe( gulp.dest('./src/vendor/') );
     });
+});
 
+gulp.task('bump', function() {
+  var bumpType = 'patch';
+  bumpType = gutil.env.minor ? 'minor' : bumpType;
+  bumpType = gutil.env.major ? 'major' : bumpType;
+  gulp.src('./*.json')
+    .pipe(bump({type:bumpType}))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('build', function() {
