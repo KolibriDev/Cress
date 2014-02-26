@@ -83,34 +83,24 @@ hr {
 .float-right { float: right; }
 .float-left { float: left; }
 
-.hide { display: none; }
-.block { display: block; }
-.inline { display: inline; }
-.inline-block { display: inline-block; }
-
-.spacing-top { margin-top: $spacing; }
-.spacing-bottom { margin-bottom: $spacing; }
-.spacing-left { margin-left: $spacing; }
-.spacing-right { margin-right: $spacing; }
-
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-@include respond-to(large) {
-  .text-center-large { text-align: center; }
-  .text-left-large { text-align: left; }
-  .text-right-large { text-align: right; }
+@include respond-to(large-only) {
+  .large-text-center { text-align: center; }
+  .large-text-left { text-align: left; }
+  .large-text-right { text-align: right; }
 }
 
-@include respond-to(medium) {
-  .text-center-medium { text-align: center; }
-  .text-left-medium { text-align: left; }
-  .text-right-medium { text-align: right; }
+@include respond-to(medium-only) {
+  .medium-text-center { text-align: center; }
+  .medium-text-left { text-align: left; }
+  .medium-text-right { text-align: right; }
 }
 
-@include respond-to(small) {
-  .text-center-small { text-align: center; }
-  .text-left-small { text-align: left; }
-  .text-right-small { text-align: right; }
+@include respond-to(small-only) {
+  .small-text-center { text-align: center; }
+  .small-text-left { text-align: left; }
+  .small-text-right { text-align: right; }
 }
