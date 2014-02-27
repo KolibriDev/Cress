@@ -8,6 +8,14 @@ This project is still in development, and provided 'as is'. We use it along with
 
 All [pull-requests](https://github.com/Form5/Cress/pulls)/[issues/bug-reports/thoughts](https://github.com/Form5/Cress/issues) are very much appreciated, and encouraged!
 
+## Getting started
+
+Install with [Bower](http://bower.io): `bower install cress`
+
+Clone the Github project: `git clone https://github.com/Form5/Cress.git`
+
+Or [download zip](https://github.com/Form5/Cress/archive/master.zip).
+
 ## Docs?
 
 We haven't created proper documentation yet, but here are some basics.
