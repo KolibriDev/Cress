@@ -1,10 +1,10 @@
 
 section {
-  padding-top: rem-calc($spacing*3);
-  padding-bottom: rem-calc($spacing*2);
+  padding-top: $spacing*3;
+  padding-bottom: $spacing*2;
 
   @include respond-to(medium) {
-    padding-bottom: rem-calc($spacing);
+    padding-bottom: $spacing;
   }
 
   &.primary {
