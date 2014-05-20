@@ -72,28 +72,18 @@ row, column { display: block; }
 
     &.right { float: $opposite-float; }
 
-    @include respond-to(small) { @include grid-columns('small'); }
-    @include respond-to(medium) { @include grid-columns('medium'); }
-    @include respond-to(large) { @include grid-columns('large'); }
+    @each $i in $breakArray {
+      @include respond-to(nth($i,1)) { @include grid-columns(nth($i,1)); }
+
+      @include respond-to('#{nth($i,1)}-only') {
+        @include grid-center(nth($i,1));
+        @include grid-offset(nth($i,1));
+        @include grid-ordering(nth($i,1));
+      }
+    }
 
     @include grid-offset();
     @include grid-ordering();
-
-    @include respond-to(small-only) {
-      @include grid-center('small');
-      @include grid-offset('small');
-      @include grid-ordering('small');
-    }
-    @include respond-to(medium-only) {
-      @include grid-center('medium');
-      @include grid-offset('medium');
-      @include grid-ordering('medium');
-    }
-    @include respond-to(large-only) {
-      @include grid-center('large');
-      @include grid-offset('large');
-      @include grid-ordering('large');
-    }
   }
 
   &.row-reverse {

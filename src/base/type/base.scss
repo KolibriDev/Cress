@@ -71,20 +71,10 @@ hgroup {
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-@include respond-to(large-only) {
-  .large-text-center { text-align: center; }
-  .large-text-left { text-align: left; }
-  .large-text-right { text-align: right; }
-}
-
-@include respond-to(medium-only) {
-  .medium-text-center { text-align: center; }
-  .medium-text-left { text-align: left; }
-  .medium-text-right { text-align: right; }
-}
-
-@include respond-to(small-only) {
-  .small-text-center { text-align: center; }
-  .small-text-left { text-align: left; }
-  .small-text-right { text-align: right; }
+@each $i in $breakArray {
+  @include respond-to('#{nth($i,1)}-only') {
+    .#{nth($i,1)}-text-center { text-align: center; }
+    .#{nth($i,1)}-text-left { text-align: left; }
+    .#{nth($i,1)}-text-right { text-align: right; }
+  }
 }
