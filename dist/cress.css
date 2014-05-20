@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.7.2
+  CreSS v0.7.3
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -1238,7 +1238,7 @@ icon.circle, checkbox.circle:before, radio.circle:before, [icon].circle {
 
 img {
   max-width: 100%; }
-  img.full {
+  img.fill {
     display: block;
     margin: 0 auto 1.25rem;
     width: 100%; }
@@ -1262,6 +1262,13 @@ figure {
     font-size: 0.8rem;
     color: #edeceb;
     background: #0F313C; }
+  figure.video {
+    padding-bottom: 56.25%;
+    height: 0; }
+    figure.video iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute; }
 
 video {
   display: block;

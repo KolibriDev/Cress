@@ -2,7 +2,7 @@
 img {
   max-width: 100%;
 
-  &.full {
+  &.fill {
     display: block;
     margin: 0 auto $spacing;
     width: 100%;
@@ -31,6 +31,16 @@ figure {
     color: $color-light;
 
     background: $color-secondary;
+  }
+
+  &.video {
+    padding-bottom: 56.25%;
+    height: 0;
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
   }
 }
 
