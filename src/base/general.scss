@@ -76,10 +76,21 @@ hr {
   overflow: hidden !important;
 }
 
+.x-scroll {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.y-scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .relative {
   position: relative;
 }
 
 .clear { clear: both; }
+.clearfix { @include clearfix(); }
 .float-right { float: right; }
 .float-left { float: left; }
