@@ -16,7 +16,7 @@ input[type="week"],
 input[type="time"],
 input[type="color"] {
   @include clearfix;
-  transition: margin $transition-speed-fast, border $transition-speed-fast, box-shadow $transition-speed-fast;
+  transition: margin $transition-speed-fast, border $transition-speed-fast;
 
   box-sizing: border-box;
   display: inline-block;
@@ -29,16 +29,17 @@ input[type="color"] {
   padding: 0 $spacing;
 
   width: auto;
+  max-width: 100%;
+  &.fill,
   .input-wrap & { width: 100%; }
-  height: $element-medium;
-  line-height: $element-medium;
 
-  font-size: $element-font-medium;
+  font-weight: $form-font-weight;
+  text-transform: $form-text-transform;
   color: $font-color;
 
   outline: none;
 
-  border: 0;
+  border: 1px solid $color-border;
   border-radius: $form-radius;
 
   background: white;
@@ -57,87 +58,16 @@ input[type="color"] {
     @include placeholder(white);
   }
 
-  &.large {
-    height: $element-large;
-    line-height: $element-large - 2;
-
-    font-size: $element-font-large;
+  @each $i in $elementArray {
+    @include respond-to('#{nth($i,1)}') {
+      height: nth($i,2);
+      line-height: nth($i,2);
+      font-size: nth($i,3);
+    }
   }
 
-  &.small {
-    height: $element-small;
-    line-height: $element-small - 2;
-
-    font-size: $element-font-small;
-  }
-
-  &:hover { box-shadow: 0 0 2px rgba($color-secondary,0.5); }
-  &:focus { box-shadow: 0 0 2px rgba($color-secondary,0.75); }
+  &:hover { border-color: rgba($color-secondary,0.5); }
+  &:focus { border-color: rgba($color-secondary,0.75); }
   .error &,
-  &.error { box-shadow: 0 0 2px 1px rgba(red,0.75); }
-
-  &.white {
-    background: white;
-    border: 1px $color-gray-light solid;
-  }
-}
-
-.input-wrap {
-  margin-bottom: $spacing;
-  position: relative;
-
-  &.tight { margin-bottom: $spacing/2; }
-
-  label {
-    display: block;
-
-    margin: 0;
-
-    font-weight: normal;
-    font-size: rem-calc(14);
-    text-align: left;
-
-    &.small {
-      line-height: $element-small - 2;
-      font-size: $element-font-small;
-    }
-
-    &.large {
-      line-height: $element-large - 2;
-      font-size: $element-font-large;
-    }
-
-    &.inline {
-      display: inline-block;
-      vertical-align: bottom;
-      padding: 0 $spacing/2;
-    }
-  }
-
-  &.side {
-    $form-side-padding: 150px;
-
-    padding-left: $form-side-padding;
-    position: relative;
-
-    >label:first-child {
-      max-width: $form-side-padding;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    @include respond-to($form-side-padding*3) {
-      padding-left: 0;
-
-      >label:first-child {
-        max-width: none;
-        position: static;
-      }
-    }
-  }
-
-  &.error {
-    label { color: red; }
-  }
+  &.error { border-color: rgba(red,0.75); }
 }

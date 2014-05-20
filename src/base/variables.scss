@@ -25,14 +25,31 @@ $box-radius: $radius;
 $form-radius: $radius;
 $button-radius: $form-radius;
 
-// Used for forms, buttons etc.
+// Forms
+$form-font-weight: bold;
+$form-text-transform: none;
+$label-font-weight: bold;
+$label-text-transform: none;
+
+// Buttons
+$button-font-weight: bold;
+$button-text-transform: none;
+
+// Used for both forms and buttons
 $element-small: rem-calc(30);
 $element-medium: rem-calc(40);
-$element-large: rem-calc(60);
+$element-large: rem-calc(40);
 
 $element-font-small: rem-calc($font-size * 0.8);
 $element-font-medium: rem-calc($font-size);
-$element-font-large: rem-calc($font-size * 1.75);
+$element-font-large: rem-calc($font-size);
+
+// breakpoint   size             font-size             padding
+$elementArray:
+  "small"       $element-small   $element-font-small   $spacing/2,
+  "medium"      $element-medium  $element-font-medium  $spacing/2,
+  "large"       $element-large   $element-font-large   $spacing/2
+;
 
 // Grayscale
 $color-gray-dark: #555;

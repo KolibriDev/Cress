@@ -10,48 +10,45 @@
   margin: 0;
   position: relative;
 
+  font-weight: $button-font-weight;
   text-align: center;
+  text-transform: $button-text-transform;
 
-  border: 1px solid transparent;
+  border: 1px solid;
   border-radius: $button-radius;
 
   outline: none;
 
-  &.small {
-    padding: 0 $spacing/2;
-    height: $element-small;
-    line-height: $element-small;
-    font-size: $element-font-small;
+  @each $i in $elementArray {
+    @include respond-to('#{nth($i,1)}') {
+      padding: 0 nth($i,4);
+      height: nth($i,2);
+      line-height: nth($i,2);
+      font-size: nth($i,3);
+
+      &.wide {
+        padding: 0 (nth($i,4) * 2);
+      }
+    }
   }
 
-  &, // (default)
-  &.medium {
-    padding: 0 $spacing;
-    height: $element-medium;
-    line-height: $element-medium;
-    font-size: $element-font-medium;
+  span {
+    display: inline-block;
+    vertical-align: middle;
   }
-
-  &.large {
-    padding: 0 $spacing*1.5;
-    height: $element-large;
-    line-height: $element-large;
-    font-size: $element-font-large;
-  }
-
-  span { display: inline-block; }
 
   &.fill {
-    @include text-overflow;
+    @include text-overflow();
     display: block;
     margin: 0 auto $spacing;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%;
   }
 
-  &.caps { text-transform: uppercase; }
-
   &.disabled {
     pointer-events: none;
+    cursor: default;
     opacity: 0.5;
   }
 }

@@ -21,26 +21,13 @@ textarea {
 
   @include resizable(vertical);
 
-  &.small {
-    $padding: $element-small - $textarea-line-height;
-    min-height: ($textarea-line-height * 3) + $padding;
-    padding-top: $padding/2;
-    padding-bottom: $padding/2;
-  }
-
-  &,
-  &.medium {
-    $padding: $element-medium - $textarea-line-height;
-    min-height: ($textarea-line-height * 3) + $padding;
-    padding-top: $padding/2;
-    padding-bottom: $padding/2;
-  }
-
-  &.large {
-    $padding: $element-large - $textarea-line-height;
-    min-height: ($textarea-line-height * 3) + $padding;
-    padding-top: $padding/2;
-    padding-bottom: $padding/2;
+  @each $i in $elementArray {
+    @include respond-to('#{nth($i,1)}') {
+      $padding: nth($i,2) - $textarea-line-height;
+      min-height: ($textarea-line-height * 3) + $padding;
+      padding-top: $padding/2;
+      padding-bottom: $padding/2;
+    }
   }
 
   &.disabled,
