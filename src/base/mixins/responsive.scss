@@ -4,13 +4,14 @@
 // ==========================================================================
 
 @mixin respond-to($media) {
-  @if $media == small {
+
+  @if $media == small-up or $media == small {
     @media #{$small-up} { @content; }
   }
-  @else if $media == medium {
+  @else if $media == medium-up or $media == medium {
     @media #{$medium-up} { @content; }
   }
-  @else if $media == large {
+  @else if $media == large-up or $media == large {
     @media #{$large-up} { @content; }
   }
 
@@ -35,6 +36,10 @@
   }
 
   @else if type-of($media) == number {
-    @media only screen and (min-width: $media) { @content; }
+    @media #{$screen} and (min-width: $media) { @content; }
+  }
+
+  @else {
+    @media #{$screen} { @content; }
   }
 }
