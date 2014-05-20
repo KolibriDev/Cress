@@ -1,4 +1,4 @@
-# CreSS v0.6.x [![Dependency Status](https://gemnasium.com/Form5/Cress.png)](https://gemnasium.com/Form5/Cress)
+# CreSS v0.7.x [![Dependency Status](https://gemnasium.com/Form5/Cress.png)](https://gemnasium.com/Form5/Cress)
 
 This is our pretty basic front-end framework. It is designed to be used as a base for new projects, not as a full-blown framework like Foundation or Bootstrap. Nonetheless it does include basic styles for the most common elements we use. Some of the form related elements require javascript functionality in order to be styleable, for that you can check out some of our [plugins](https://github.com/Form5), or simply use your own!
 

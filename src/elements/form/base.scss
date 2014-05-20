@@ -58,6 +58,11 @@ input[type="color"] {
     @include placeholder(white);
   }
 
+  &:hover { border-color: rgba($color-secondary,0.5); }
+  &:focus { border-color: rgba($color-secondary,0.75); }
+  .error &,
+  &.error { border-color: rgba(red,0.75); }
+
   @each $i in $elementArray {
     @include respond-to('#{nth($i,1)}') {
       height: nth($i,2);
@@ -66,8 +71,13 @@ input[type="color"] {
     }
   }
 
-  &:hover { border-color: rgba($color-secondary,0.5); }
-  &:focus { border-color: rgba($color-secondary,0.75); }
-  .error &,
-  &.error { border-color: rgba(red,0.75); }
+  @each $i in $colorArray {
+    &.#{nth($i,1)} {
+      background-color: mix(nth($i,2),white,15%);
+      border-color: nth($i,2);
+
+      &:hover { border-color: rgba(nth($i,2),0.5); }
+      &:focus { border-color: rgba(nth($i,2),0.75); }
+    }
+  }
 }

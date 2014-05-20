@@ -47,4 +47,16 @@
       &:before { opacity: 0; }
     }
   }
+
+  @each $i in $colorArray {
+    $selector: '.#{nth($i,1)}';
+    @if nth($i,1) == 'primary' {
+      $selector: '';
+    }
+    &#{$selector} {
+      background-color: nth($i,2);
+      color: nth($i,3);
+      .input-wrap &:before { border-bottom-color: nth($i,2); }
+    }
+  }
 }

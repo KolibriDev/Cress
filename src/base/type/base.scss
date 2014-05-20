@@ -12,7 +12,24 @@ a {
 
   &:hover,
   &:focus {
-    color: darken($color-primary,5%);
+    color: mix(black,$color-primary,10%);
+  }
+
+  @each $i in $colorArray {
+    &.#{nth($i,1)} {
+      color: nth($i,2);
+
+      &:hover {
+        color: mix(black,nth($i,2),10%);
+      }
+    }
+    .#{nth($i,1)} & {
+      color: nth($i,3);
+
+      &:hover {
+        color: mix(black,nth($i,3),10%);
+      }
+    }
   }
 }
 

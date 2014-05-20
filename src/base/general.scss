@@ -64,6 +64,22 @@ hr {
   &.dotline {
     border-top-style: dashed;
   }
+
+  @each $i in $colorArray {
+    &.#{nth($i,1)} {
+      border-top-color: nth($i,2);
+      &.light {
+        border-top-color: mix(white,nth($i,2),10%);
+      }
+      &.dark {
+        border-top-color: mix(black,nth($i,2),10%);
+      }
+    }
+
+    .#{nth($i,1)} & {
+      border-top-color: nth($i,3);
+    }
+  }
 }
 
 // Cheat classes
@@ -94,3 +110,20 @@ hr {
 .clearfix { @include clearfix(); }
 .float-right { float: right; }
 .float-left { float: left; }
+
+@each $i in $colorArray {
+  &.#{nth($i,1)}-text {
+    color: nth($i,2);
+  }
+  &.#{nth($i,1)}-back {
+    color: nth($i,3);
+    background-color: nth($i,2);
+
+    &.light {
+      background-color: mix(white,nth($i,2),10%);
+    }
+    &.dark {
+      background-color: mix(black,nth($i,2),10%);
+    }
+  }
+}

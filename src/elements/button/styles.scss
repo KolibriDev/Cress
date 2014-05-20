@@ -1,53 +1,30 @@
 
 .button, button {
-  color: white;
 
-  background: $color-primary;
-  border-color: $color-primary;
-
-  -webkit-font-smoothing: antialiased;
-
-  &:hover {
-    color: white;
-    background: darken($color-primary,10%);
-  }
-
-  &.dark,
-  &.secondary {
-    color: white;
-
-    background: rgba($color-secondary,0.9);
-    border-color: rgba($color-secondary,0.9);
-
-    -webkit-font-smoothing: antialiased;
-
-    &:hover {
-      color: white;
-      background: darken($color-secondary,5%);
+  @each $i in $colorArray {
+    $selector: '.#{nth($i,1)}';
+    @if nth($i,1) == 'primary' {
+      $selector: '';
     }
-  }
+    &#{$selector} {
+      color: nth($i,3);
+      background: nth($i,2);
+      border-color: mix(black,nth($i,2),10%);
 
-  &.light {
-    color: $color-secondary;
+      @if lightness(nth($i,3)) > lightness(nth($i,2)) {
+        -webkit-font-smoothing: antialiased;
+      }
 
-    background: $color-light;
-    border-color: rgba($color-secondary,0.1);
+      &:focus,
+      &:hover {
+        color: nth($i,3);
+        background: mix(black, nth($i,2), 10%);
+        border-color: mix(black, nth($i,2), 15%);
+      }
 
-    &:hover {
-      color: $color-secondary;
-      background: lighten($color-light,5%);
-    }
-  }
-
-  &.white {
-    color: $color-secondary;
-
-    background: white;
-    border-color: rgba($color-secondary,0.1);
-
-    &:hover {
-      color: $color-secondary;
-      background: lighten($color-light,5%);
+      &:active {
+        background: mix(white, nth($i,2) , 5%);
+      }
     }
   }
 }
