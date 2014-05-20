@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.7.0
+  CreSS v0.7.1
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -348,6 +348,15 @@ td, th {
 /* 0 - 640px */
 /* 641px, 1024px */
 /* 1025px+ */
+@-webkit-keyframes spin360 {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes spin360 {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 html {
   overflow-x: hidden;
   overflow-y: scroll;
