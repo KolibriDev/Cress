@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.5.3
+  CreSS v0.5.6
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -1007,7 +1007,7 @@ hgroup {
 icon, checkbox:before, radio:before, [icon] {
   display: inline-block; }
 
-icon.circle, [icon].circle {
+icon.circle, checkbox.circle:before, radio.circle:before, [icon].circle {
   display: inline-block;
   width: 1.875rem;
   height: 1.875rem;
@@ -1018,18 +1018,18 @@ icon.circle, [icon].circle {
   background: white;
   border-radius: 100%;
   color: #41485e; }
-  icon.circle.right:after, icon.circle:before, [icon].circle.right:after, [icon].circle:before {
+  icon.circle.right:after, icon.circle:before, checkbox.circle:before, radio.circle:before, [icon].circle.right:after, [icon].circle:before {
     display: block;
     margin: 0 auto;
     width: 1.875rem;
     height: 1.875rem; }
-  icon.circle.primary, [icon].circle.primary {
+  icon.circle.primary, checkbox.circle.primary:before, radio.circle.primary:before, [icon].circle.primary {
     background: #ee6969;
     color: white; }
-  icon.circle.secondary, [icon].circle.secondary {
+  icon.circle.secondary, checkbox.circle.secondary:before, radio.circle.secondary:before, [icon].circle.secondary {
     background: #41485e;
     color: white; }
-  icon.circle.light, [icon].circle.light {
+  icon.circle.light, checkbox.circle.light:before, radio.circle.light:before, [icon].circle.light {
     background: #ededeb;
     color: #ee6969; }
 
@@ -1065,7 +1065,7 @@ video {
   margin: 0 auto 1.25rem;
   max-width: 100%; }
 
-.box {
+.box, box {
   display: block;
   position: relative;
   margin-left: auto;
@@ -1073,21 +1073,21 @@ video {
   margin-bottom: 1.25rem;
   padding: 1.25rem 1.25rem 0;
   border-radius: 0.25rem; }
-  .box:before, .box:after {
+  .box:before, .box:after, box:before, box:after {
     content: " ";
     display: table; }
-  .box:after {
+  .box:after, box:after {
     clear: both; }
-  .box.primary {
+  .box.primary, box.primary {
     background-color: #ee6969;
     color: #ededeb; }
-  .box.secondary {
+  .box.secondary, box.secondary {
     background-color: #41485e;
     color: #ededeb; }
-  .box.light {
+  .box.light, box.light {
     background-color: #ededeb;
     color: #41485e; }
-  .box.white {
+  .box.white, box.white {
     background-color: white;
     color: #41485e; }
 
@@ -1225,6 +1225,9 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   dropdown:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="color"]:-ms-input-placeholder {
     color: rgba(65, 72, 94, 0.25);
     font-style: normal; }
+  dropdown:-moz-placeholder, select:-moz-placeholder, textarea:-moz-placeholder, input[type="text"]:-moz-placeholder, input[type="search"]:-moz-placeholder, input[type="url"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="date"]:-moz-placeholder, input[type="datetime-local"]:-moz-placeholder, input[type="month"]:-moz-placeholder, input[type="week"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="color"]:-moz-placeholder {
+    color: rgba(65, 72, 94, 0.25);
+    font-style: normal; }
   dropdown::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder, input[type="text"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="date"]::-moz-placeholder, input[type="datetime-local"]::-moz-placeholder, input[type="month"]::-moz-placeholder, input[type="week"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="color"]::-moz-placeholder {
     color: rgba(65, 72, 94, 0.25);
     font-style: normal; }
@@ -1239,6 +1242,9 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
     color: white;
     background: #e93b3b; }
     dropdown.disabled:-ms-input-placeholder, dropdown[disabled]:-ms-input-placeholder, select.disabled:-ms-input-placeholder, select[disabled]:-ms-input-placeholder, textarea.disabled:-ms-input-placeholder, textarea[disabled]:-ms-input-placeholder, input[type="text"].disabled:-ms-input-placeholder, input[type="text"][disabled]:-ms-input-placeholder, input[type="search"].disabled:-ms-input-placeholder, input[type="search"][disabled]:-ms-input-placeholder, input[type="url"].disabled:-ms-input-placeholder, input[type="url"][disabled]:-ms-input-placeholder, input[type="email"].disabled:-ms-input-placeholder, input[type="email"][disabled]:-ms-input-placeholder, input[type="password"].disabled:-ms-input-placeholder, input[type="password"][disabled]:-ms-input-placeholder, input[type="tel"].disabled:-ms-input-placeholder, input[type="tel"][disabled]:-ms-input-placeholder, input[type="number"].disabled:-ms-input-placeholder, input[type="number"][disabled]:-ms-input-placeholder, input[type="date"].disabled:-ms-input-placeholder, input[type="date"][disabled]:-ms-input-placeholder, input[type="datetime-local"].disabled:-ms-input-placeholder, input[type="datetime-local"][disabled]:-ms-input-placeholder, input[type="month"].disabled:-ms-input-placeholder, input[type="month"][disabled]:-ms-input-placeholder, input[type="week"].disabled:-ms-input-placeholder, input[type="week"][disabled]:-ms-input-placeholder, input[type="time"].disabled:-ms-input-placeholder, input[type="time"][disabled]:-ms-input-placeholder, input[type="color"].disabled:-ms-input-placeholder, input[type="color"][disabled]:-ms-input-placeholder {
+      color: white;
+      font-style: normal; }
+    dropdown.disabled:-moz-placeholder, dropdown[disabled]:-moz-placeholder, select.disabled:-moz-placeholder, select[disabled]:-moz-placeholder, textarea.disabled:-moz-placeholder, textarea[disabled]:-moz-placeholder, input[type="text"].disabled:-moz-placeholder, input[type="text"][disabled]:-moz-placeholder, input[type="search"].disabled:-moz-placeholder, input[type="search"][disabled]:-moz-placeholder, input[type="url"].disabled:-moz-placeholder, input[type="url"][disabled]:-moz-placeholder, input[type="email"].disabled:-moz-placeholder, input[type="email"][disabled]:-moz-placeholder, input[type="password"].disabled:-moz-placeholder, input[type="password"][disabled]:-moz-placeholder, input[type="tel"].disabled:-moz-placeholder, input[type="tel"][disabled]:-moz-placeholder, input[type="number"].disabled:-moz-placeholder, input[type="number"][disabled]:-moz-placeholder, input[type="date"].disabled:-moz-placeholder, input[type="date"][disabled]:-moz-placeholder, input[type="datetime-local"].disabled:-moz-placeholder, input[type="datetime-local"][disabled]:-moz-placeholder, input[type="month"].disabled:-moz-placeholder, input[type="month"][disabled]:-moz-placeholder, input[type="week"].disabled:-moz-placeholder, input[type="week"][disabled]:-moz-placeholder, input[type="time"].disabled:-moz-placeholder, input[type="time"][disabled]:-moz-placeholder, input[type="color"].disabled:-moz-placeholder, input[type="color"][disabled]:-moz-placeholder {
       color: white;
       font-style: normal; }
     dropdown.disabled::-moz-placeholder, dropdown[disabled]::-moz-placeholder, select.disabled::-moz-placeholder, select[disabled]::-moz-placeholder, textarea.disabled::-moz-placeholder, textarea[disabled]::-moz-placeholder, input[type="text"].disabled::-moz-placeholder, input[type="text"][disabled]::-moz-placeholder, input[type="search"].disabled::-moz-placeholder, input[type="search"][disabled]::-moz-placeholder, input[type="url"].disabled::-moz-placeholder, input[type="url"][disabled]::-moz-placeholder, input[type="email"].disabled::-moz-placeholder, input[type="email"][disabled]::-moz-placeholder, input[type="password"].disabled::-moz-placeholder, input[type="password"][disabled]::-moz-placeholder, input[type="tel"].disabled::-moz-placeholder, input[type="tel"][disabled]::-moz-placeholder, input[type="number"].disabled::-moz-placeholder, input[type="number"][disabled]::-moz-placeholder, input[type="date"].disabled::-moz-placeholder, input[type="date"][disabled]::-moz-placeholder, input[type="datetime-local"].disabled::-moz-placeholder, input[type="datetime-local"][disabled]::-moz-placeholder, input[type="month"].disabled::-moz-placeholder, input[type="month"][disabled]::-moz-placeholder, input[type="week"].disabled::-moz-placeholder, input[type="week"][disabled]::-moz-placeholder, input[type="time"].disabled::-moz-placeholder, input[type="time"][disabled]::-moz-placeholder, input[type="color"].disabled::-moz-placeholder, input[type="color"][disabled]::-moz-placeholder {
@@ -1834,11 +1840,11 @@ hero {
     background-color: #41485e; }
 
 section {
-  padding-top: 0.23438rem;
-  padding-bottom: 0.15625rem; }
+  padding-top: 3.75rem;
+  padding-bottom: 2.5rem; }
   @media only screen and (min-width:40.0625rem) {
     section {
-      padding-bottom: 0.07812rem; } }
+      padding-bottom: 1.25rem; } }
   section.primary {
     background-color: #ee6969;
     color: #ededeb; }
