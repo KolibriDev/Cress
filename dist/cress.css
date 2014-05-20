@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.6.2
+  CreSS v0.6.3
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -1936,10 +1936,11 @@ hero {
     background-color: #41485e; }
 
 section {
-  padding-top: 3.75rem;
-  padding-bottom: 2.5rem; }
+  padding-top: 1.25rem;
+  padding-bottom: 0; }
   @media only screen and (min-width:40.0625rem) {
     section {
+      padding-top: 2.5rem;
       padding-bottom: 1.25rem; } }
   section.primary {
     background-color: #ee6969;
