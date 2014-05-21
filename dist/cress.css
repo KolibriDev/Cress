@@ -1,5 +1,5 @@
 /*!
-  CreSS v0.7.3
+  CreSS v0.7.4
   Written by Form5
   http://www.form5.is
   hello@form5.is
@@ -348,10 +348,30 @@ td, th {
 /* 0 - 640px */
 /* 641px, 1024px */
 /* 1025px+ */
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
 @-webkit-keyframes spin360 {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+
 @keyframes spin360 {
   100% {
     -webkit-transform: rotate(360deg);
@@ -2199,26 +2219,6 @@ nav.breadcrumbs > ul {
         padding: 0.625rem 0.3125rem;
         line-height: 1.25rem;
         font-size: 16px; }
-
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@keyframes fadein {
-  0% {
-    opacity: 0; }
-
-  50% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
 
 hero {
   -webkit-user-select: none;
