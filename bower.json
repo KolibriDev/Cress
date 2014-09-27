@@ -1,6 +1,6 @@
 {
   "name": "CreSS",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "homepage": "https://github.com/KolibriDev/Cress",
   "authors": [
     "Benedikt D Valdez <benedikt@kolibri.is>",
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git://github.com/KolibriDev/Cress.git"
   },
+  "main": "cress.min.css",
   "keywords": [
     "kolibri",
     "cress",
