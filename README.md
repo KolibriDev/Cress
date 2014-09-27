@@ -1,20 +1,20 @@
-# CreSS v0.7.x [![Dependency Status](https://gemnasium.com/Form5/Cress.png)](https://gemnasium.com/Form5/Cress)
+# CreSS v0.7.x [![Dependency Status](https://gemnasium.com/KolibriDev/Cress.png)](https://gemnasium.com/KolibriDev/Cress)
 
-This is our pretty basic front-end framework. It is designed to be used as a base for new projects, not as a full-blown framework like Foundation or Bootstrap. Nonetheless it does include basic styles for the most common elements we use. Some of the form related elements require javascript functionality in order to be styleable, for that you can check out some of our [plugins](https://github.com/Form5), or simply use your own!
+This is our pretty basic front-end framework. It is designed to be used as a base for new projects, not as a full-blown framework like Foundation or Bootstrap. Nonetheless it does include basic styles for the most common elements we use. Some of the form related elements require javascript functionality in order to be styleable, for that you can check out some of our [plugins](https://github.com/KolibriDev), or simply use your own!
 
-This project is still in development, and provided 'as is'. We use it along with either [grunt-seed](https://github.com/Form5/grunt-seed) or [gulp-blender](https://github.com/Form5/gulp-blender) as a base for almost all our front-end-development projects, but **CreSS** can easily be implemented into any setup.
+This project is still in development, and provided 'as is'. We use it along with [gulp-blender](https://github.com/KolibriDev/gulp-blender) as a base for almost all our front-end-development projects, but **CreSS** can easily be implemented into any setup.
 
 ### Contributions
 
-All [pull-requests](https://github.com/Form5/Cress/pulls)/[issues/bug-reports/thoughts](https://github.com/Form5/Cress/issues) are very much appreciated, and encouraged!
+All [pull-requests](https://github.com/KolibriDev/Cress/pulls)/[issues/bug-reports/thoughts](https://github.com/KolibriDev/Cress/issues) are very much appreciated, and encouraged!
 
 ## Getting started
 
 Install with [Bower](http://bower.io): `bower install cress`
 
-Clone the Github project: `git clone https://github.com/Form5/Cress.git`
+Clone the Github project: `git clone https://github.com/KolibriDev/Cress.git`
 
-Or [download zip](https://github.com/Form5/Cress/archive/master.zip).
+Or [download zip](https://github.com/KolibriDev/Cress/archive/master.zip).
 
 ## Docs?
 
@@ -68,7 +68,7 @@ $ gulp build
 
 ## Author
 
-Form5 is a small interactive studio based in Reykjavík, Iceland. We design and build websites and apps. To learn more about us, check out [www.Form5.is](http://www.form5.is).
+Kolibri is a new company, formed by Form5 and Sprettur, and takes its name from one of the best designed birds of the animal kingdom and a symbol of passion in several cultures. We design and develop enriching business experiences with several amazing clients. To learn more about us, check out [www.kolibri.is](http://www.kolibri.is).
 
 ## Contributors
 

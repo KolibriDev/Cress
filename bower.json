@@ -1,17 +1,17 @@
 {
   "name": "CreSS",
-  "version": "0.7.5",
-  "homepage": "https://github.com/Form5/Cress",
+  "version": "0.7.6",
+  "homepage": "https://github.com/KolibriDev/Cress",
   "authors": [
-    "Benedikt D Valdez <benedikt@form5.is>",
-    "Olafur Nielsen <olafur@form5.is>"
+    "Benedikt D Valdez <benedikt@kolibri.is>",
+    "Olafur Nielsen <olafur@kolibri.is>"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/Form5/Cress.git"
+    "url": "git://github.com/KolibriDev/Cress.git"
   },
   "keywords": [
-    "form5",
+    "kolibri",
     "cress",
     "front-end",
     "css",

@@ -1,8 +1,8 @@
 /*!
-  CreSS v0.7.4
-  Written by Form5
-  http://www.form5.is
-  hello@form5.is
+  CreSS v0.7.6
+  Written by Kolibri
+  http://www.kolibri.is
+  hello@kolibri.is
   License: MIT
 */
 /* ==========================================================================
@@ -1359,8 +1359,6 @@ video {
   -khtml-user-drag: element;
   -webkit-user-drag: element; }
 
-
-
 hl {
   list-style-type: none;
   list-style-image: none;
@@ -1695,7 +1693,6 @@ dropdown, select, textarea, input[type="text"], input[type="search"], input[type
   .input-wrap.error label {
     color: red; }
 
-
 .input-wrap textarea, textarea {
   line-height: 1.25rem;
   resize: vertical;
@@ -1968,7 +1965,6 @@ radio {
 radio:before {
   border-radius: 100%; }
 
-
 input[type="color"] {
   padding: 1px 3px !important; }
   input[type="color"].small, .input-wrap input[type="color"].small {
@@ -2135,7 +2131,6 @@ input[type="color"] {
     border-color: black; }
   .button.black:active, button.black:active {
     background: #0c0c0c; }
-
 
 nav.top {
   -webkit-user-select: none;
