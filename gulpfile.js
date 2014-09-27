@@ -3,7 +3,7 @@ var gulp   = require('gulp'),
     gutil  = require('gulp-util'),
     bump   = require('gulp-bump'),
     sass   = require('gulp-sass'),
-    cssmin = require('gulp-minify-css'),
+    csso   = require('gulp-csso'),
     prefix = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
     header = require('gulp-header'),
@@ -45,10 +45,13 @@ gulp.task('bump', function() {
 gulp.task('build', function() {
   return gulp.src('src/*.scss')
     .pipe( sass() )
-    .pipe( prefix('> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1') )
+    .pipe( prefix({
+        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
+        cascade: false
+      }) )
     .pipe( header(banner, {pkg: pkg}) )
     .pipe( gulp.dest('dist/') )
-    .pipe( cssmin() )
+    .pipe( csso() )
     .pipe( rename({suffix: '.min'}) )
     .pipe( gulp.dest('dist/') );
 });
